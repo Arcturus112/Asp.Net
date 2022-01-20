@@ -1,0 +1,234 @@
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll.config
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.pdb
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe.config
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.rsp
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe.config
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.rsp
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.AppContext.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Console.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Http.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Sockets.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.ValueTuple.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe.config
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.rsp
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CopyComplete
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.dll
+C:\Users\DELL\Desktop\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.pdb
+D:\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll.config
+D:\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.pdb
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe.config
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.rsp
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe.config
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.rsp
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.AppContext.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Collections.Immutable.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Console.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Http.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Sockets.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.ValueTuple.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe.config
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.rsp
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe
+D:\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe.config
+D:\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.AssemblyReference.cache
+D:\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CoreCompileInputs.cache
+D:\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CopyComplete
+D:\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.dll
+D:\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.pdb
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\myFirstProject.dll.config
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\myFirstProject.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\myFirstProject.pdb
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csc.exe
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csc.exe.config
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csc.rsp
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csi.exe
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csi.exe.config
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\csi.rsp
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.AppContext.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Collections.Immutable.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Console.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Net.Http.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Net.Sockets.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.ValueTuple.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\vbc.exe
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\vbc.exe.config
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\vbc.rsp
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe.config
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\darshan .net - Copy\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csprojResolveAssemblyReference.cache
+D:\darshan .net - Copy\myFirstProject\myFirstProject\obj\Debug\myFirstProject.dll
+D:\darshan .net - Copy\myFirstProject\myFirstProject\obj\Debug\myFirstProject.pdb
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.AssemblyReference.cache
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CoreCompileInputs.cache
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.pdb
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll.config
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\myFirstProject.pdb
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.exe.config
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csc.rsp
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.exe.config
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\csi.rsp
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Managed.Core.targets
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.AppContext.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Collections.Immutable.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Console.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Globalization.Calendars.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Http.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Net.Sockets.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Reflection.Metadata.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.ValueTuple.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XmlDocument.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.exe.config
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\vbc.rsp
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\roslyn\VBCSCompiler.exe.config
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\darshan sem 6\darshan .net\myFirstProject\myFirstProject\obj\Debug\myFirstProject.csproj.CopyComplete
