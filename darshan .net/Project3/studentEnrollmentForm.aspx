@@ -92,7 +92,7 @@
                     <asp:RequiredFieldValidator ID="rfvEnrollmentNo" runat="server" ErrorMessage="Enter The EnrollmentNumber" ControlToValidate="txtEnrollmentNo" Display="None" ForeColor="Red" ValidationGroup="EnrollmentLogin"></asp:RequiredFieldValidator>
                 </td>
                 <td>
-                    <asp:RegularExpressionValidator ID="revEnrollmentNo" runat="server" Display="Dynamic" ErrorMessage="Enter The 12 Digit EnrollMent Number" ForeColor="Red" ValidationExpression="[0-9]{2}[0][5][4]{0-9}{7}" ControlToValidate="txtEnrollmentNo"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="revEnrollmentNo" runat="server" Display="Dynamic" ErrorMessage="Enter Valid Enrollment Number(12 digit)" ForeColor="Red" ValidationExpression="^[0-9]{2}054[0-9]{7}$" ControlToValidate="txtEnrollmentNo"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
