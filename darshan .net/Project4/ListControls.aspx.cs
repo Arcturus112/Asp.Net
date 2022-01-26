@@ -12,22 +12,21 @@ namespace Project4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSet DS = new DataSet();
-            string path = Server.MapPath("~/resources/Country-codes.xml");
-            DS.ReadXml(path);
-            ddlCountry.DataTextField = "Country";
-            ddlCountry.DataValueField = "Code";
-            ddlCountry.DataSource = DS;
-            ddlCountry.DataBind();
-
-            ListItem li = new ListItem("Select","-1");
-            ddlCountry.Items.Insert(0,li);
-
+            if (Page.IsPostBack == false)
+            {
+                DataSet DS = new DataSet();
+                string path = Server.MapPath("~/resources/Country-codes.xml");
+                DS.ReadXml(path);
+                ddlCountry.DataTextField = "Country";
+                ddlCountry.DataValueField = "Code";
+                ddlCountry.DataSource = DS;
+                ddlCountry.DataBind();
+            }
         }
 
         protected void btnDisplayListCountry_Click(object sender, EventArgs e)
         {
-
+            lblListMassage.Text = ddlCountry.SelectedValue;
         }
     }
 }
