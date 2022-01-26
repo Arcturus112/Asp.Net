@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <record index="1">
+      <Country>Afghanistan </Country>
+      <Code>+93</Code>
+    </record>
+    <record index="2">
+      <Country>Albania </Country>
+      <Code>+355</Code>
+    </record>
+    <record index="3">
+      <Country>Algeria </Country>
+      <Code>+213</Code>
+    </record>
+    <record index="4">
+      <Country>American Samoa</Country>
+      <Code>+1-684</Code>
+    </record>
+    <record index="5">
+      <Country>Andorra, Principality of </Country>
+      <Code>+376</Code>
+    </record>
+    <record index="6">
+      <Country>Angola</Country>
+      <Code>+244</Code>
+    </record>
+    <record index="7">
+      <Country>Anguilla </Country>
+      <Code>+1-264</Code>
+    </record>
+    <record index="8">
+      <Country>Antarctica</Country>
+      <Code>+672</Code>
+    </record>
+    <record index="9">
+      <Country>Antigua and Barbuda</Country>
+      <Code>+1-268</Code>
+    </record>
+    <record index="10">
+      <Country>Argentina </Country>
+      <Code>+54</Code>
+    </record>
+    <record index="11">
+      <Country>Armenia</Country>
+      <Code>+374</Code>
+    </record>
+    <record index="12">
+      <Country>Aruba</Country>
+      <Code>+297</Code>
+    </record>
+    <record index="13">
+      <Country>Australia</Country>
+      <Code>+61</Code>
+    </record>
+    <record index="14">
+      <Country>Austria</Country>
+      <Code>+43</Code>
+    </record>
+    <record index="15">
+      <Country>Azerbaijan or Azerbaidjan (Former Azerbaijan Soviet Socialist Republic)</Country>
+      <Code>+994</Code>
+    </record>
+    <record index="16">
+      <Country>Bahamas, Commonwealth of The</Country>
+      <Code>+1-242</Code>
+    </record>
+    <record index="17">
+      <Country>Bahrain, Kingdom of (Former Dilmun)</Country>
+      <Code>+973</Code>
+    </record>
+    <record index="18">
+      <Country>Bangladesh (Former East Pakistan)</Country>
+      <Code>+880</Code>
+    </record>
+    <record index="19">
+      <Country>Barbados </Country>
+      <Code>+1-246</Code>
+    </record>
+    <record index="20">
+      <Country>Belarus (Former Belorussian [Byelorussian] Soviet Socialist Republic)</Country>
+      <Code>+375</Code>
+    </record>
+    <record index="21">
+      <Country>Belgium </Country>
+      <Code>+32</Code>
+    </record>
+    <record index="22">
+      <Country>Belize (Former British Honduras)</Country>
+      <Code>+501</Code>
+    </record>
+    <record index="23">
+      <Country>Benin (Former Dahomey)</Country>
+      <Code>+229</Code>
+    </record>
+    <record index="24">
+      <Country>Bermuda </Country>
+      <Code>+1-441</Code>
+    </record>
+    <record index="25">
+      <Country>Bhutan, Kingdom of</Country>
+      <Code>+975</Code>
+    </record>
+    <record index="26">
+      <Country>Bolivia </Country>
+      <Code>+591</Code>
+    </record>
+    <record index="27">
+      <Country>Bosnia and Herzegovina </Country>
+      <Code>+387</Code>
+    </record>
+    <record index="28">
+      <Country>Botswana (Former Bechuanaland)</Country>
+      <Code>+267</Code>
+    </record>
+    <record index="29">
+      <Country>Brazil </Country>
+      <Code>+55</Code>
+    </record>
+    <record index="30">
+      <Country>Brunei (Negara Brunei Darussalam) </Country>
+      <Code>+673</Code>
+    </record>
+    <record index="31">
+      <Country>Bulgaria </Country>
+      <Code>+359</Code>
+    </record>
+    <record index="32">
+      <Country>Burkina Faso (Former Upper Volta)</Country>
+      <Code>+226</Code>
+    </record>
+    <record index="33">
+      <Country>Burundi (Former Urundi)</Country>
+      <Code>+257</Code>
+    </record>
+    <record index="34">
+      <Country>Cambodia, Kingdom of (Former Khmer Republic, Kampuchea Republic)</Country>
+      <Code>+855</Code>
+    </record>
+    <record index="35">
+      <Country>Cameroon (Former French Cameroon)</Country>
+      <Code>+237</Code>
+    </record>
+    <record index="36">
+      <Country>Canada </Country>
+      <Code>+1</Code>
+    </record>
+    <record index="37">
+      <Country>Cape Verde </Country>
+      <Code>+238</Code>
+    </record>
+    <record index="38">
+      <Country>Cayman Islands </Country>
+      <Code>+1-345</Code>
+    </record>
+    <record index="39">
+      <Country>Central African Republic </Country>
+      <Code>+236</Code>
+    </record>
+    <record index="40">
+      <Country>Chad </Country>
+      <Code>+235</Code>
+    </record>
+    <record index="41">
+      <Country>Chile </Country>
+      <Code>+56</Code>
+    </record>
+    <record index="42">
+      <Country>China </Country>
+      <Code>+86</Code>
+    </record>
+    <record index="43">
+      <Country>Christmas Island </Country>
+      <Code>+53</Code>
+    </record>
+    <record index="44">
+      <Country>Cocos (Keeling) Islands </Country>
+      <Code>+61</Code>
+    </record>
+    <record index="45">
+      <Country>Colombia </Country>
+      <Code>+57</Code>
+    </record>
+    <record index="46">
+      <Country>Comoros, Union of the </Country>
+      <Code>+269</Code>
+    </record>
+    <record index="47">
+      <Country>Congo, Democratic Republic of the (Former Zaire) </Country>
+      <Code>+243</Code>
+    </record>
+    <record index="48">
+      <Country>Congo, Republic of the</Country>
+      <Code>+242</Code>
+    </record>
+    <record index="49">
+      <Country>Cook Islands (Former Harvey Islands)</Country>
+      <Code>+682</Code>
+    </record>
+    <record index="50">
+      <Country>Costa Rica </Country>
+      <Code>+506</Code>
+    </record>
+    <record index="51">
+      <Country>Cote D'Ivoire (Former Ivory Coast) </Country>
+      <Code>+225</Code>
+    </record>
+    <record index="52">
+      <Country>Croatia (Hrvatska) </Country>
+      <Code>+385</Code>
+    </record>
+    <record index="53">
+      <Country>Cuba </Country>
+      <Code>+53</Code>
+    </record>
+    <record index="54">
+      <Country>Cyprus </Country>
+      <Code>+357</Code>
+    </record>
+    <record index="55">
+      <Country>Czech Republic</Country>
+      <Code>+420</Code>
+    </record>
+    <record index="56">
+      <Country>Czechoslavakia (Former) See CZ Czech Republic or Slovakia</Country>
+      <Code></Code>
+    </record>
+    <record index="57">
+      <Country>Denmark </Country>
+      <Code>+45</Code>
+    </record>
+    <record index="58">
+      <Country>Djibouti (Former French Territory of the Afars and Issas, French Somaliland)</Country>
+      <Code>+253</Code>
+    </record>
+    <record index="59">
+      <Country>Dominica </Country>
+      <Code>+1-767</Code>
+    </record>
+    <record index="60">
+      <Country>Dominican Republic </Country>
+      <Code>+1-809 and +1-829  </Code>
+    </record>
+    <record index="61">
+      <Country>East Timor (Former Portuguese Timor)</Country>
+      <Code>+670</Code>
+    </record>
+    <record index="62">
+      <Country>Ecuador </Country>
+      <Code>+593 </Code>
+    </record>
+    <record index="63">
+      <Country>Egypt (Former United Arab Republic - with Syria)</Country>
+      <Code>+20</Code>
+    </record>
+    <record index="64">
+      <Country>El Salvador </Country>
+      <Code>+503</Code>
+    </record>
+    <record index="65">
+      <Country>Equatorial Guinea (Former Spanish Guinea)</Country>
+      <Code>+240</Code>
+    </record>
+    <record index="66">
+      <Country>Eritrea (Former Eritrea Autonomous Region in Ethiopia)</Country>
+      <Code>+291</Code>
+    </record>
+    <record index="67">
+      <Country>Estonia (Former Estonian Soviet Socialist Republic)</Country>
+      <Code>+372</Code>
+    </record>
+    <record index="68">
+      <Country>Ethiopia (Former Abyssinia, Italian East Africa)</Country>
+      <Code>+251</Code>
+    </record>
+    <record index="69">
+      <Country>Falkland Islands (Islas Malvinas) </Country>
+      <Code>+500</Code>
+    </record>
+    <record index="70">
+      <Country>Faroe Islands </Country>
+      <Code>+298</Code>
+    </record>
+    <record index="71">
+      <Country>Fiji </Country>
+      <Code>+679</Code>
+    </record>
+    <record index="72">
+      <Country>Finland </Country>
+      <Code>+358</Code>
+    </record>
+    <record index="73">
+      <Country>France </Country>
+      <Code>+33</Code>
+    </record>
+    <record index="74">
+      <Country>French Guiana or French Guyana </Country>
+      <Code>+594</Code>
+    </record>
+    <record index="75">
+      <Country>French Polynesia (Former French Colony of Oceania)</Country>
+      <Code>+689</Code>
+    </record>
+    <record index="76">
+      <Country>Gabon (Gabonese Republic)</Country>
+      <Code>+241</Code>
+    </record>
+    <record index="77">
+      <Country>Gambia, The </Country>
+      <Code>+220</Code>
+    </record>
+    <record index="78">
+      <Country>Georgia (Former Georgian Soviet Socialist Republic)</Country>
+      <Code>+995</Code>
+    </record>
+    <record index="79">
+      <Country>Germany </Country>
+      <Code>+49</Code>
+    </record>
+    <record index="80">
+      <Country>Ghana (Former Gold Coast)</Country>
+      <Code>+233</Code>
+    </record>
+    <record index="81">
+      <Country>Gibraltar </Country>
+      <Code>+350</Code>
+    </record>
+    <record index="82">
+      <Country>Greece </Country>
+      <Code>+30</Code>
+    </record>
+    <record index="83">
+      <Country>Greenland </Country>
+      <Code>+299</Code>
+    </record>
+    <record index="84">
+      <Country>Grenada </Country>
+      <Code>+1-473</Code>
+    </record>
+    <record index="85">
+      <Country>Guadeloupe</Country>
+      <Code>+590</Code>
+    </record>
+    <record index="86">
+      <Country>Guam</Country>
+      <Code>+1-671</Code>
+    </record>
+    <record index="87">
+      <Country>Guatemala </Country>
+      <Code>+502</Code>
+    </record>
+    <record index="88">
+      <Country>Guinea (Former French Guinea)</Country>
+      <Code>+224</Code>
+    </record>
+    <record index="89">
+      <Country>Guinea-Bissau (Former Portuguese Guinea)</Country>
+      <Code>+245</Code>
+    </record>
+    <record index="90">
+      <Country>Guyana (Former British Guiana)</Country>
+      <Code>+592</Code>
+    </record>
+    <record index="91">
+      <Country>Haiti </Country>
+      <Code>+509</Code>
+    </record>
+    <record index="92">
+      <Country>Honduras </Country>
+      <Code>+504</Code>
+    </record>
+    <record index="93">
+      <Country>Hong Kong </Country>
+      <Code>+852</Code>
+    </record>
+    <record index="94">
+      <Country>Hungary </Country>
+      <Code>+36</Code>
+    </record>
+    <record index="95">
+      <Country>Iceland </Country>
+      <Code>+354</Code>
+    </record>
+    <record index="96">
+      <Country>India </Country>
+      <Code>+91</Code>
+    </record>
+    <record index="97">
+      <Country>Indonesia (Former Netherlands East Indies; Dutch East Indies)</Country>
+      <Code>+62</Code>
+    </record>
+    <record index="98">
+      <Country>Iran, Islamic Republic of</Country>
+      <Code>+98</Code>
+    </record>
+    <record index="99">
+      <Country>Iraq </Country>
+      <Code>+964</Code>
+    </record>
+    <record index="100">
+      <Country>Ireland </Country>
+      <Code>+353</Code>
+    </record>
+    <record index="101">
+      <Country>Israel </Country>
+      <Code>+972</Code>
+    </record>
+    <record index="102">
+      <Country>Italy </Country>
+      <Code>+39</Code>
+    </record>
+    <record index="103">
+      <Country>Jamaica </Country>
+      <Code>+1-876</Code>
+    </record>
+    <record index="104">
+      <Country>Japan </Country>
+      <Code>+81</Code>
+    </record>
+    <record index="105">
+      <Country>Jordan (Former Transjordan)</Country>
+      <Code>+962</Code>
+    </record>
+    <record index="106">
+      <Country>Kazakstan or Kazakhstan (Former Kazakh Soviet Socialist Republic)</Country>
+      <Code>+7</Code>
+    </record>
+    <record index="107">
+      <Country>Kenya (Former British East Africa)</Country>
+      <Code>+254</Code>
+    </record>
+    <record index="108">
+      <Country>Kiribati (Pronounced keer-ree-bahss) (Former Gilbert Islands)</Country>
+      <Code>+686</Code>
+    </record>
+    <record index="109">
+      <Country>Korea, Democratic People's Republic of (North Korea)</Country>
+      <Code>+850</Code>
+    </record>
+    <record index="110">
+      <Country>Korea, Republic of (South Korea) </Country>
+      <Code>+82</Code>
+    </record>
+    <record index="111">
+      <Country>Kuwait </Country>
+      <Code>+965</Code>
+    </record>
+    <record index="112">
+      <Country>Kyrgyzstan (Kyrgyz Republic) (Former Kirghiz Soviet Socialist Republic)</Country>
+      <Code>+996</Code>
+    </record>
+    <record index="113">
+      <Country>Lao People's Democratic Republic (Laos)</Country>
+      <Code>+856</Code>
+    </record>
+    <record index="114">
+      <Country>Latvia (Former Latvian Soviet Socialist Republic)</Country>
+      <Code>+371</Code>
+    </record>
+    <record index="115">
+      <Country>Lebanon </Country>
+      <Code>+961</Code>
+    </record>
+    <record index="116">
+      <Country>Lesotho (Former Basutoland)</Country>
+      <Code>+266</Code>
+    </record>
+    <record index="117">
+      <Country>Liberia </Country>
+      <Code>+231</Code>
+    </record>
+    <record index="118">
+      <Country>Libya (Libyan Arab Jamahiriya)</Country>
+      <Code>+218</Code>
+    </record>
+    <record index="119">
+      <Country>Liechtenstein </Country>
+      <Code>+423</Code>
+    </record>
+    <record index="120">
+      <Country>Lithuania (Former Lithuanian Soviet Socialist Republic)</Country>
+      <Code>+370</Code>
+    </record>
+    <record index="121">
+      <Country>Luxembourg </Country>
+      <Code>+352</Code>
+    </record>
+    <record index="122">
+      <Country>Macau </Country>
+      <Code>+853</Code>
+    </record>
+    <record index="123">
+      <Country>Macedonia, The Former Yugoslav Republic of</Country>
+      <Code>+389</Code>
+    </record>
+    <record index="124">
+      <Country>Madagascar (Former Malagasy Republic)</Country>
+      <Code>+261</Code>
+    </record>
+    <record index="125">
+      <Country>Malawi (Former British Central African Protectorate, Nyasaland)</Country>
+      <Code>+265</Code>
+    </record>
+    <record index="126">
+      <Country>Malaysia </Country>
+      <Code>+60</Code>
+    </record>
+    <record index="127">
+      <Country>Maldives </Country>
+      <Code>+960</Code>
+    </record>
+    <record index="128">
+      <Country>Mali (Former French Sudan and Sudanese Republic) </Country>
+      <Code>+223</Code>
+    </record>
+    <record index="129">
+      <Country>Malta </Country>
+      <Code>+356</Code>
+    </record>
+    <record index="130">
+      <Country>Marshall Islands (Former Marshall Islands District - Trust Territory of the Pacific Islands)</Country>
+      <Code>+692</Code>
+    </record>
+    <record index="131">
+      <Country>Martinique (French) </Country>
+      <Code>+596</Code>
+    </record>
+    <record index="132">
+      <Country>Mauritania </Country>
+      <Code>+222</Code>
+    </record>
+    <record index="133">
+      <Country>Mauritius </Country>
+      <Code>+230</Code>
+    </record>
+    <record index="134">
+      <Country>Mayotte (Territorial Collectivity of Mayotte)</Country>
+      <Code>+269</Code>
+    </record>
+    <record index="135">
+      <Country>Mexico </Country>
+      <Code>+52</Code>
+    </record>
+    <record index="136">
+      <Country>Micronesia, Federated States of (Former Ponape, Truk, and Yap Districts - Trust Territory of the Pacific Islands)</Country>
+      <Code>+691</Code>
+    </record>
+    <record index="137">
+      <Country>Moldova, Republic of</Country>
+      <Code>+373</Code>
+    </record>
+    <record index="138">
+      <Country>Monaco, Principality of</Country>
+      <Code>+377</Code>
+    </record>
+    <record index="139">
+      <Country>Mongolia (Former Outer Mongolia)</Country>
+      <Code>+976</Code>
+    </record>
+    <record index="140">
+      <Country>Montserrat </Country>
+      <Code>+1-664</Code>
+    </record>
+    <record index="141">
+      <Country>Morocco </Country>
+      <Code>+212</Code>
+    </record>
+    <record index="142">
+      <Country>Mozambique (Former Portuguese East Africa)</Country>
+      <Code>+258</Code>
+    </record>
+    <record index="143">
+      <Country>Myanmar, Union of (Former Burma)</Country>
+      <Code>+95</Code>
+    </record>
+    <record index="144">
+      <Country>Namibia (Former German Southwest Africa, South-West Africa)</Country>
+      <Code>+264</Code>
+    </record>
+    <record index="145">
+      <Country>Nauru (Former Pleasant Island)</Country>
+      <Code>+674</Code>
+    </record>
+    <record index="146">
+      <Country>Nepal </Country>
+      <Code>+977</Code>
+    </record>
+    <record index="147">
+      <Country>Netherlands </Country>
+      <Code>+31</Code>
+    </record>
+    <record index="148">
+      <Country>Netherlands Antilles (Former Curacao and Dependencies)</Country>
+      <Code>+599</Code>
+    </record>
+    <record index="149">
+      <Country>New Caledonia </Country>
+      <Code>+687</Code>
+    </record>
+    <record index="150">
+      <Country>New Zealand (Aotearoa) </Country>
+      <Code>+64</Code>
+    </record>
+    <record index="151">
+      <Country>Nicaragua </Country>
+      <Code>+505</Code>
+    </record>
+    <record index="152">
+      <Country>Niger </Country>
+      <Code>+227</Code>
+    </record>
+    <record index="153">
+      <Country>Nigeria </Country>
+      <Code>+234</Code>
+    </record>
+    <record index="154">
+      <Country>Niue (Former Savage Island)</Country>
+      <Code>+683</Code>
+    </record>
+    <record index="155">
+      <Country>Norfolk Island </Country>
+      <Code>+672</Code>
+    </record>
+    <record index="156">
+      <Country>Northern Mariana Islands (Former Mariana Islands District - Trust Territory of the Pacific Islands)</Country>
+      <Code>+1-670</Code>
+    </record>
+    <record index="157">
+      <Country>Norway </Country>
+      <Code>+47</Code>
+    </record>
+    <record index="158">
+      <Country>Oman, Sultanate of (Former Muscat and Oman)</Country>
+      <Code>+968</Code>
+    </record>
+    <record index="159">
+      <Country>Pakistan (Former West Pakistan)</Country>
+      <Code>+92</Code>
+    </record>
+    <record index="160">
+      <Country>Palau (Former Palau District - Trust Terriroty of the Pacific Islands)</Country>
+      <Code>+680</Code>
+    </record>
+    <record index="161">
+      <Country>Palestinian State (Proposed)</Country>
+      <Code>+970</Code>
+    </record>
+    <record index="162">
+      <Country>Panama </Country>
+      <Code>+507</Code>
+    </record>
+    <record index="163">
+      <Country>Papua New Guinea (Former Territory of Papua and New Guinea)</Country>
+      <Code>+675</Code>
+    </record>
+    <record index="164">
+      <Country>Paraguay </Country>
+      <Code>+595</Code>
+    </record>
+    <record index="165">
+      <Country>Peru </Country>
+      <Code>+51</Code>
+    </record>
+    <record index="166">
+      <Country>Philippines </Country>
+      <Code>+63</Code>
+    </record>
+    <record index="167">
+      <Country>Poland </Country>
+      <Code>+48</Code>
+    </record>
+    <record index="168">
+      <Country>Portugal </Country>
+      <Code>+351</Code>
+    </record>
+    <record index="169">
+      <Country>Puerto Rico </Country>
+      <Code>+1-787 or +1-939</Code>
+    </record>
+    <record index="170">
+      <Country>Qatar, State of </Country>
+      <Code>+974 </Code>
+    </record>
+    <record index="171">
+      <Country>Reunion (French) (Former Bourbon Island)</Country>
+      <Code>+262</Code>
+    </record>
+    <record index="172">
+      <Country>Romania </Country>
+      <Code>+40</Code>
+    </record>
+    <record index="173">
+      <Country>Russian Federation </Country>
+      <Code>+7</Code>
+    </record>
+    <record index="174">
+      <Country>Rwanda (Rwandese Republic) (Former Ruanda)</Country>
+      <Code>+250</Code>
+    </record>
+    <record index="175">
+      <Country>Saint Helena </Country>
+      <Code>+290</Code>
+    </record>
+    <record index="176">
+      <Country>Saint Kitts and Nevis (Former Federation of Saint Christopher and Nevis)</Country>
+      <Code>+1-869</Code>
+    </record>
+    <record index="177">
+      <Country>Saint Lucia </Country>
+      <Code>+1-758</Code>
+    </record>
+    <record index="178">
+      <Country>Saint Pierre and Miquelon </Country>
+      <Code>+508</Code>
+    </record>
+    <record index="179">
+      <Country>Saint Vincent and the Grenadines </Country>
+      <Code>+1-784</Code>
+    </record>
+    <record index="180">
+      <Country>Samoa (Former Western Samoa)</Country>
+      <Code>+685</Code>
+    </record>
+    <record index="181">
+      <Country>San Marino </Country>
+      <Code>+378</Code>
+    </record>
+    <record index="182">
+      <Country>Sao Tome and Principe </Country>
+      <Code>+239</Code>
+    </record>
+    <record index="183">
+      <Country>Saudi Arabia </Country>
+      <Code>+966</Code>
+    </record>
+    <record index="184">
+      <Country>Senegal </Country>
+      <Code>+221</Code>
+    </record>
+    <record index="185">
+      <Country>Seychelles </Country>
+      <Code>+248</Code>
+    </record>
+    <record index="186">
+      <Country>Sierra Leone </Country>
+      <Code>+232</Code>
+    </record>
+    <record index="187">
+      <Country>Singapore </Country>
+      <Code>+65</Code>
+    </record>
+    <record index="188">
+      <Country>Slovakia</Country>
+      <Code>+421</Code>
+    </record>
+    <record index="189">
+      <Country>Slovenia </Country>
+      <Code>+386</Code>
+    </record>
+    <record index="190">
+      <Country>Solomon Islands (Former British Solomon Islands)</Country>
+      <Code>+677</Code>
+    </record>
+    <record index="191">
+      <Country>Somalia (Former Somali Republic, Somali Democratic Republic) </Country>
+      <Code>+252</Code>
+    </record>
+    <record index="192">
+      <Country>South Africa (Former Union of South Africa)</Country>
+      <Code>+27</Code>
+    </record>
+    <record index="193">
+      <Country>Spain </Country>
+      <Code>+34</Code>
+    </record>
+    <record index="194">
+      <Country>Sri Lanka (Former Serendib, Ceylon) </Country>
+      <Code>+94</Code>
+    </record>
+    <record index="195">
+      <Country>Sudan (Former Anglo-Egyptian Sudan) </Country>
+      <Code>+249</Code>
+    </record>
+    <record index="196">
+      <Country>Suriname (Former Netherlands Guiana, Dutch Guiana)</Country>
+      <Code>+597</Code>
+    </record>
+    <record index="197">
+      <Country>Swaziland, Kingdom of </Country>
+      <Code>+268</Code>
+    </record>
+    <record index="198">
+      <Country>Sweden </Country>
+      <Code>+46</Code>
+    </record>
+    <record index="199">
+      <Country>Switzerland </Country>
+      <Code>+41</Code>
+    </record>
+    <record index="200">
+      <Country>Syria (Syrian Arab Republic) (Former United Arab Republic - with Egypt)</Country>
+      <Code>+963</Code>
+    </record>
+    <record index="201">
+      <Country>Taiwan (Former Formosa)</Country>
+      <Code>+886</Code>
+    </record>
+    <record index="202">
+      <Country>Tajikistan (Former Tajik Soviet Socialist Republic)</Country>
+      <Code>+992</Code>
+    </record>
+    <record index="203">
+      <Country>Tanzania, United Republic of (Former United Republic of Tanganyika and Zanzibar)</Country>
+      <Code>+255</Code>
+    </record>
+    <record index="204">
+      <Country>Thailand (Former Siam)</Country>
+      <Code>+66</Code>
+    </record>
+    <record index="205">
+      <Country>Tokelau </Country>
+      <Code>+690</Code>
+    </record>
+    <record index="206">
+      <Country>Tonga, Kingdom of (Former Friendly Islands)</Country>
+      <Code>+676</Code>
+    </record>
+    <record index="207">
+      <Country>Trinidad and Tobago </Country>
+      <Code>+1-868</Code>
+    </record>
+    <record index="208">
+      <Country>Tunisia </Country>
+      <Code>+216</Code>
+    </record>
+    <record index="209">
+      <Country>Turkey </Country>
+      <Code>+90</Code>
+    </record>
+    <record index="210">
+      <Country>Turkmenistan (Former Turkmen Soviet Socialist Republic)</Country>
+      <Code>+993</Code>
+    </record>
+    <record index="211">
+      <Country>Turks and Caicos Islands </Country>
+      <Code>+1-649</Code>
+    </record>
+    <record index="212">
+      <Country>Tuvalu (Former Ellice Islands)</Country>
+      <Code>+688</Code>
+    </record>
+    <record index="213">
+      <Country>Uganda, Republic of</Country>
+      <Code>+256</Code>
+    </record>
+    <record index="214">
+      <Country>Ukraine (Former Ukrainian National Republic, Ukrainian State, Ukrainian Soviet Socialist Republic)</Country>
+      <Code>+380</Code>
+    </record>
+    <record index="215">
+      <Country>United Arab Emirates (UAE) (Former Trucial Oman, Trucial States)</Country>
+      <Code>+971</Code>
+    </record>
+    <record index="216">
+      <Country>United Kingdom (Great Britain / UK)</Country>
+      <Code>+44</Code>
+    </record>
+    <record index="217">
+      <Country>United States </Country>
+      <Code>+1</Code>
+    </record>
+    <record index="218">
+      <Country>Uruguay, Oriental Republic of (Former Banda Oriental, Cisplatine Province)</Country>
+      <Code>+598</Code>
+    </record>
+    <record index="219">
+      <Country>Uzbekistan (Former UZbek Soviet Socialist Republic)</Country>
+      <Code>+998</Code>
+    </record>
+    <record index="220">
+      <Country>Vanuatu (Former New Hebrides)</Country>
+      <Code>+678</Code>
+    </record>
+    <record index="221">
+      <Country>Vatican City State (Holy See)</Country>
+      <Code>+418</Code>
+    </record>
+    <record index="222">
+      <Country>Venezuela </Country>
+      <Code>+58</Code>
+    </record>
+    <record index="223">
+      <Country>Vietnam </Country>
+      <Code>+84</Code>
+    </record>
+    <record index="224">
+      <Country>Virgin Islands, British </Country>
+      <Code>+1-284</Code>
+    </record>
+    <record index="225">
+      <Country>Virgin Islands, United States (Former Danish West Indies) </Country>
+      <Code>+1-340</Code>
+    </record>
+    <record index="226">
+      <Country>Wallis and Futuna Islands </Country>
+      <Code>+681</Code>
+    </record>
+    <record index="227">
+      <Country>Western Sahara (Former Spanish Sahara)</Country>
+      <Code></Code>
+    </record>
+    <record index="228">
+      <Country>Yemen </Country>
+      <Code>+967</Code>
+    </record>
+    <record index="229">
+      <Country>Yugoslavia </Country>
+      <Code></Code>
+    </record>
+    <record index="230">
+      <Country>Zambia, Republic of (Former Northern Rhodesia) </Country>
+      <Code>+260</Code>
+    </record>
+    <record index="231">
+      <Country>Zimbabwe, Republic of (Former Southern Rhodesia, Rhodesia) </Country>
+      <Code>+263</Code>
+    </record>
+</data>

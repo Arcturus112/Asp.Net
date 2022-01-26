@@ -10,7 +10,15 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlCountry" runat="server"></asp:DropDownList>
+            </div>
+            <br />
+            <div>
+                <asp:Button ID="btnDisplayListCountry" runat="server" Text="Disply" OnClick="btnDisplayListCountry_Click" />
+            </div>
+            <br />
+            <div>
+                <asp:Label ID="lblListMassage" runat="server"></asp:Label>
             </div>
         </div>
     </form>
