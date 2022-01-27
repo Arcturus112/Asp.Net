@@ -26,7 +26,9 @@ namespace Project4
 
         protected void btnDisplayListCountry_Click(object sender, EventArgs e)
         {
-            lblListMassage.Text = ddlCountry.SelectedValue;
+            lblListMassage.Text = ddlCountry.SelectedIndex.ToString().Trim() + "-" +
+                ddlCountry.SelectedItem.Text.Trim() + "-" +
+                ddlCountry.SelectedValue.Trim();
         }
     }
 }
