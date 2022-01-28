@@ -51,13 +51,13 @@ namespace Project4
         protected global::System.Web.UI.WebControls.TextBox txtCountryCode;
 
         /// <summary>
-        /// rfvCountryCode control.
+        /// rvCountryCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCountryCode;
+        protected global::System.Web.UI.WebControls.RangeValidator rvCountryCode;
 
         /// <summary>
         /// btnAddItem control.

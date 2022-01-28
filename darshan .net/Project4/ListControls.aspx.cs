@@ -59,39 +59,6 @@ namespace Project4
 
         protected void btnAddItem_Click(object sender, EventArgs e)
         {
-            //if (ddlCountry.DataValueField == txtCountryCode.Text.Trim() && ddlCountry.DataTextField == txtCountryName.Text.Trim())
-            //{
-            //    lblListMassage.Text = "Item Alrady Available";
-            //}
-            //else
-            //{
-            //    ddlCountry.Items.Add(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim()));
-            //}
-
-            //string sCountry = null;
-            //sCountry = txtCountryName.Text.Trim();
-
-            //if (!string.IsNullOrEmpty(sCountry.Trim()))
-            //{ 
-            //    if ((ddlCountry.Items.FindByText(sCountry) == null))
-            //    {
-            //        ddlCountry.Items.Add(new ListItem(sCountry, sCountry));
-
-            //        txtCountryName.Text = "";
-
-            //        int iBooksCount = ddlCountry.Items.Count - 1;
-            //        lblListMassage.Text = "Country Add. <br />";
-            //    }
-            //    else
-            //    {
-            //        lblListMassage.Text = "Country already Added.<br />";
-            //    }
-
-            //    txtCountryName.Text = "";
-            //    txtCountryName.Focus();
-            //}
-
-
             if (ddlCountry.Items.Contains(new ListItem(txtCountryName.Text.Trim(),txtCountryCode.Text.Trim())) == true)
             {
                 lblListMassage.Text = "Country already Added.";
@@ -100,19 +67,18 @@ namespace Project4
             {
                 ddlCountry.Items.Add(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim()));
             }
-
         }
 
         protected void btnRemoveItem_Click(object sender, EventArgs e)
         {
-            //if (ddlCountry.Text == txtCountryName.Text.Trim())
-            //{
-            //    ddlCountry.Items.Remove(txtCountryName.Text.Trim());
-            //}
-            //else
-            //{
-            //    lblListMassage.Text = "Item Not Available.";
-            //}
+            if (ddlCountry.Items.Contains(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim())) == true)
+            {
+                ddlCountry.Items.Remove(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim()));
+            }
+            else
+            {
+                lblListMassage.Text = "Item Not Available.";
+            }
         }
     }
 }

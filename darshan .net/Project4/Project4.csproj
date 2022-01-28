@@ -67,11 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ListBox.aspx" />
     <Content Include="ListControls.aspx" />
     <Content Include="resources\Country-codes.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListBox.aspx.cs">
+      <DependentUpon>ListBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListBox.aspx.designer.cs">
+      <DependentUpon>ListBox.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListControls.aspx.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -22,7 +22,7 @@
                     <td>Country Code:</td>
                     <td><asp:TextBox ID="txtCountryCode" class="form-control" runat="server"></asp:TextBox></td>
                     <td>
-                        <asp:RequiredFieldValidator ID="rfvCountryCode" runat="server" ControlToValidate="txtCountryCode" CssClass="alert" Display="Dynamic" EnableViewState="False" ErrorMessage="Enter Country Code"></asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="rvCountryCode" runat="server" ControlToValidate="txtCountryCode" CssClass="alert" Display="Dynamic" EnableViewState="False" ErrorMessage="Enter Country Code" MaximumValue="999" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr class="text-center">
