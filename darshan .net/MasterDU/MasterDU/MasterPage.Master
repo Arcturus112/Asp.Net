@@ -17,30 +17,7 @@
 
         <div class="container">
             <div class="row" id="Header">
-                <div class="col-md-3">
-                    <asp:Image ID="imgDULogo" runat="server" AlternateText="Darshan University" ToolTip="Darshan University" ImageUrl="~/Content/IMAGES/DarshanLogo.png" />
-                </div>
-                <div class="col-md-9 d-flex align-items-end flex-column">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Darshan University</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>Rajkot - Morbi Highway, Gujarat-363650, India</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <asp:HyperLink ID="hlHomeHeader" runat="server">Home</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="hlAboutHeader" runat="server">About</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="hlProgramsHeader" runat="server">Programs</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="hlLMSHeader" runat="server">LMS</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="hlContactHeader" runat="server">Contact</asp:HyperLink>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -48,22 +25,7 @@
                 </div>
             </div>
             <div class="row" id="Footer">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <asp:HyperLink ID="HyperLink1" runat="server">Home</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="HyperLink2" runat="server">About</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="HyperLink3" runat="server">Programs</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="HyperLink4" runat="server">LMS</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                            <asp:HyperLink ID="HyperLink5" runat="server">Contact</asp:HyperLink>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            Darshan University
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
 
