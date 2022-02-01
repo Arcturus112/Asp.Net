@@ -121,6 +121,17 @@
 
 
                             <nav class="navbar navbar-expand-lg p-0 js-mega-menu hs-menu-initialized hs-menu-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <asp:HyperLink runat="server" ID="hlHomeHeader" Text="Home" NavigateUrl="~/Content/DUWebsite/Home.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlAboutHeader" Text="About" NavigateUrl="~/Content/DUWebsite/AboutDU.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlProgramsHeader" Text="Programs" NavigateUrl="~/Content/DUWebsite/Programs.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlSchoolHeader" Text="School" NavigateUrl="~/Content/DUWebsite/School.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlCampus" Text="Campus" NavigateUrl="~/Content/DUWebsite/Campus.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlPlacement" Text="Placement" NavigateUrl="~/Content/DUWebsite/Placement.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <asp:HyperLink runat="server" ID="hlContactHeader" Text="Contact" NavigateUrl="~/Content/DUWebsite/Contact.aspx" />
+                                    </div>
+                                </div>
                             </nav>
 
 

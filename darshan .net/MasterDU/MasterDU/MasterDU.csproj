@@ -72,16 +72,13 @@
     <Content Include="Content\CSS\MasterPageCss.css" />
     <Content Include="Content\IMAGES\DarshanLogo.png" />
     <Content Include="Content\JS\bootstrap.bundle.min.js" />
-    <Content Include="Content\WEBPAGES\AboutDU.aspx" />
+    <Content Include="Content\Webpages\AboutDU.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\WEBPAGES\AboutDU.aspx.cs">
+    <Compile Include="Content\Webpages\AboutDU.aspx.cs">
       <DependentUpon>AboutDU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Content\WEBPAGES\AboutDU.aspx.designer.cs">
-      <DependentUpon>AboutDU.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
