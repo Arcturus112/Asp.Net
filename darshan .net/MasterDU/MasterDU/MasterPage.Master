@@ -8,28 +8,205 @@
     <link href="Content/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/CSS/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/CSS/MasterPageCss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <script src="Content/JS/bootstrap.bundle.min.js"></script>
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <header id="header" class="navbar-light bg-light p-3 sticky-top" data-header-fix-moment="200" data-header-fix-effect="slide">
+            <div class="u-header" data-header-fix-moment-exclude="g-py-15" data-header-fix-moment-classes="u-shadow-v18 g-py-7">
+                <div class="container">
+                    <div class="row">
+                        <asp:HyperLink ID="hlLogo" runat="server">
+                            <asp:Image ID="imgInstituteLogo" runat="server" AlternateText="Logo" class="img-responsive" ToolTip="Darshan University" ImageUrl="~/Content/IMAGES/DarshanLogo.png" />
+                        </asp:HyperLink>
 
-        <div class="container">
-            <div class="row" id="Header">
-                
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <asp:ContentPlaceHolder ID="cphMainContent" runat="server"></asp:ContentPlaceHolder>
+                        <div class="col g-mt-10 g-mt-0--lg g-px-0 d-flex align-items-end flex-column">
+                            <div class="d-none d-lg-block">
+                                <ul>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">
+                                        <asp:HyperLink runat="server" ID="hlHeader1" NavigateUrl="https://gtu.darshan.ac.in/DIET/StudentCorner">
+                                            Student Corner
+                                        </asp:HyperLink>
+                                    </li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">|</li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">
+                                        <asp:HyperLink runat="server" ID="hlHeader2" NavigateUrl="https://gtu.darshan.ac.in/Fees/PayFees" Target="_blank">
+                                            <i class="fas fa-rupee-sign"></i>&nbsp; Pay Fees
+                                        </asp:HyperLink>
+                                    </li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">|</li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">
+                                        <asp:HyperLink runat="server" ID="hlHeader3" NavigateUrl="https://gtu.darshan.ac.in//DIET/NIRF" Target="_blank">
+                                            &nbsp; NIRF
+                                        </asp:HyperLink>
+                                    </li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">|</li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">
+                                        <asp:HyperLink runat="server" ID="hlHeader4" NavigateUrl="https://gtu.darshan.ac.in//DIET/Career" Target="_blank">
+                                            &nbsp; Career
+                                        </asp:HyperLink>
+                                    </li>
+                                    <li class="list-inline-item g-mx-4 g-mt-10">|</li>
+                                    <li class="list-inline-item g-mx-4">
+                                        <asp:HyperLink runat="server" ID="hlHeader5" NavigateUrl="https://gtu.darshan.ac.in/DIETDS" Target="_blank"> 
+                                            &nbsp; Diploma Website
+                                        </asp:HyperLink>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <nav class="navbar navbar-expand-lg p-0 js-mega-menu hs-menu-initialized hs-menu-horizontal">
+                            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row" id="Footer">
-                
-            </div>
+        </header>
+        <div class="col-md-12">
+            <asp:ContentPlaceHolder ID="cphMainContent" runat="server"></asp:ContentPlaceHolder>
         </div>
 
-
+        <footer class="navbar-light bg-light p-3 fixed-bottom u-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <small>2022 © All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
