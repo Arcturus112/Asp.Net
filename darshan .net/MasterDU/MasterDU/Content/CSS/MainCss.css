@@ -1,0 +1,21 @@
+﻿body {
+}
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(https://c0.wallpaperflare.com/preview/534/41/125/school-books-young-adult-education.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius:5px;
+    padding: 30px;
+}
+#u-section {
+    background: rgba(255,255,255,.5);
+    border-radius:10px;
+    padding: 50px;
+}

@@ -67,18 +67,92 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\CSS\MainCss.css" />
     <Content Include="Content\CSS\bootstrap-theme.min.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
     <Content Include="Content\CSS\MasterPageCss.css" />
+    <Content Include="Content\IMAGES\arrow-down-sign-to-navigate.png" />
     <Content Include="Content\IMAGES\DarshanLogo.png" />
     <Content Include="Content\JS\bootstrap.bundle.min.js" />
     <Content Include="Content\Webpages\AboutDU.aspx" />
+    <Content Include="Content\Webpages\AboutTrust.aspx" />
+    <Content Include="Content\Webpages\Campus.aspx" />
+    <Content Include="Content\Webpages\ChairmanMassage.aspx" />
+    <Content Include="Content\Webpages\Contacts.aspx" />
+    <Content Include="Content\Webpages\Library.aspx" />
+    <Content Include="Content\Webpages\MQAdmission.aspx" />
+    <Content Include="Content\Webpages\Programs.aspx" />
+    <Content Include="Content\Webpages\TPCell.aspx" />
+    <Content Include="Content\Webpages\WhyDarshan.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Content\Webpages\AboutDU.aspx.cs">
       <DependentUpon>AboutDU.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\AboutTrust.aspx.cs">
+      <DependentUpon>AboutTrust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\AboutTrust.aspx.designer.cs">
+      <DependentUpon>AboutTrust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\Campus.aspx.cs">
+      <DependentUpon>Campus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\Campus.aspx.designer.cs">
+      <DependentUpon>Campus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\ChairmanMassage.aspx.cs">
+      <DependentUpon>ChairmanMassage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\ChairmanMassage.aspx.designer.cs">
+      <DependentUpon>ChairmanMassage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\Library.aspx.cs">
+      <DependentUpon>Library.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\Library.aspx.designer.cs">
+      <DependentUpon>Library.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\MQAdmission.aspx.cs">
+      <DependentUpon>MQAdmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\MQAdmission.aspx.designer.cs">
+      <DependentUpon>MQAdmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\Programs.aspx.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\Programs.aspx.designer.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\TPCell.aspx.cs">
+      <DependentUpon>TPCell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\TPCell.aspx.designer.cs">
+      <DependentUpon>TPCell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content\Webpages\WhyDarshan.aspx.cs">
+      <DependentUpon>WhyDarshan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Webpages\WhyDarshan.aspx.designer.cs">
+      <DependentUpon>WhyDarshan.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>

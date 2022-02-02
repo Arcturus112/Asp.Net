@@ -9,7 +9,8 @@
     <link href="Content/CSS/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/CSS/MasterPageCss.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-    <script src="Content/JS/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -58,149 +59,88 @@
                                 </ul>
                             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <nav class="navbar navbar-expand-lg p-0 js-mega-menu hs-menu-initialized hs-menu-horizontal">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <asp:HyperLink runat="server" ID="hlHomeHeader" Text="Home" NavigateUrl="~/Content/DUWebsite/Home.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlAboutHeader" Text="About" NavigateUrl="~/Content/DUWebsite/AboutDU.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlProgramsHeader" Text="Programs" NavigateUrl="~/Content/DUWebsite/Programs.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlSchoolHeader" Text="School" NavigateUrl="~/Content/DUWebsite/School.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlCampus" Text="Campus" NavigateUrl="~/Content/DUWebsite/Campus.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlPlacement" Text="Placement" NavigateUrl="~/Content/DUWebsite/Placement.aspx" />&nbsp;&nbsp;|&nbsp;&nbsp;
-                                        <asp:HyperLink runat="server" ID="hlContactHeader" Text="Contact" NavigateUrl="~/Content/DUWebsite/Contact.aspx" />
+                                        <nav class="navbar navbar-expand-lg">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="main_nav1">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <asp:HyperLink ID="hlDropdown" runat="server" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">About</asp:HyperLink>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAbout1" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/AboutDU.aspx">About</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAbout2" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/AboutTrust.aspx">About Trust</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAbout3" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/ChairmanMassage.aspx">Chairman's Message</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="HyperLink4" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/Contacts.aspx">CONTACTS</asp:HyperLink></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="main_nav2">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <asp:HyperLink ID="HyperLink1" runat="server" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Admission</asp:HyperLink>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAdmission1" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/WhyDarshan.aspx">Why Darshan?</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAdmission2" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/MQAdmission.aspx">MQ Admission</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlAdmission3" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/Programs.aspx">Programs</asp:HyperLink></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="main_nav3">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <asp:HyperLink ID="HyperLink2" runat="server" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Campus</asp:HyperLink>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <asp:HyperLink ID="HyperLink8" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/Campus.aspx">Life at campus</asp:HyperLink></li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="HyperLink9" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/Library.aspx">Library</asp:HyperLink></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+                                                <div class="collapse navbar-collapse" id="main_nav4">
+                                                    <ul class="navbar-nav">
+                                                        <li class="nav-item dropdown">
+                                                            <asp:HyperLink ID="HyperLink3" runat="server" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown">Placement</asp:HyperLink>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <asp:HyperLink ID="HyperLink11" runat="server" class="dropdown-item" NavigateUrl="~/Content/Webpages/TPCell.aspx">Placement</asp:HyperLink>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
                                     </div>
                                 </div>
                             </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         </div>
                     </div>
