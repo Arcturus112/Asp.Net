@@ -20,8 +20,10 @@ namespace Project5.AdminPanel.Country
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SqlString strCountryName = SqlString.Null;
+            SqlString strCountryCode = SqlString.Null;
 
-            SqlConnection objConn = new SqlConnection("data source = DESKTOP - 6H43U15; initial catalog = AddressBook; Integrated Security = True");
+            SqlConnection objConn = new SqlConnection();
+            objConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
             objConn.Open();
 
             SqlCommand objCmd = objConn.CreateCommand();
@@ -29,7 +31,19 @@ namespace Project5.AdminPanel.Country
             objCmd.CommandType = CommandType.StoredProcedure;
             objCmd.CommandText = "PR_Country_Insert";
 
+            strCountryName = txtCountryName.Text.Trim();
+            objCmd.Parameters.AddWithValue("@CountryName", strCountryName);
+
+            strCountryCode = txtCountryCode.Text.Trim();
+            objCmd.Parameters.AddWithValue("@CountryCode", strCountryCode);
+
+            objCmd.ExecuteNonQuery();
+
             objConn.Close();
+            lblMassage.Text = "Data Inserted Successfully";
+            txtCountryName.Text = "";
+            txtCountryCode.Text = "";
+            txtCountryName.Focus();
         }
     }
 }
