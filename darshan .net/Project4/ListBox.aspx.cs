@@ -85,6 +85,7 @@ namespace Project4
         }
         protected void btnAddItem_Click(object sender, EventArgs e)
         {
+            
             if (lstBox1.Items.Contains(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim())) == true)
             {
                 lblLList.Text = "Country already Added.";
@@ -93,6 +94,7 @@ namespace Project4
             {
                 lstBox1.Items.Add(new ListItem(txtCountryName.Text.Trim(), txtCountryCode.Text.Trim()));
             }
+
         }
 
         protected void btnRemoveItem_Click(object sender, EventArgs e)
