@@ -8,19 +8,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Project5.AdminPanel.Country
+namespace Project5.AdminPanel.ContactCategory
 {
-    public partial class CountryAddEdit : System.Web.UI.Page
+    public partial class ContactCategoryAddEdit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            SqlString strCountryName = SqlString.Null;
-            SqlString strCountryCode = SqlString.Null;
+            SqlString strContactCategoryName= SqlString.Null;
 
             SqlConnection objConn = new SqlConnection();
             objConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
@@ -29,27 +27,20 @@ namespace Project5.AdminPanel.Country
             SqlCommand objCmd = objConn.CreateCommand();
 
             objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Country_Insert";
+            objCmd.CommandText = "PR_ContactCategory_Insert";
 
-            if(txtCountryName.Text.Trim() != "")
+            if (txtContactCategoryName.Text.Trim() != "")
             {
-                strCountryName = txtCountryName.Text.Trim();
-                objCmd.Parameters.AddWithValue("@CountryName", strCountryName);
-            }
-
-            if(txtCountryCode.Text.Trim() != "")
-            {
-                strCountryCode = txtCountryCode.Text.Trim();
-                objCmd.Parameters.AddWithValue("@CountryCode", strCountryCode);
+                strContactCategoryName = txtContactCategoryName.Text.Trim();
+                objCmd.Parameters.AddWithValue("@ContactCategoryName", strContactCategoryName);
             }
 
             objCmd.ExecuteNonQuery();
 
             objConn.Close();
             lblMassage.Text = "Data Inserted Successfully";
-            txtCountryName.Text = "";
-            txtCountryCode.Text = "";
-            txtCountryName.Focus();
+            txtContactCategoryName.Text = "";
+            txtContactCategoryName.Focus();
         }
     }
 }
