@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -13,8 +14,7 @@ namespace Project5.AdminPanel.State
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection objConn = new SqlConnection();
-            objConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             objConn.Open();
             SqlCommand objCmd = new SqlCommand();
             objCmd.Connection = objConn;
@@ -22,8 +22,11 @@ namespace Project5.AdminPanel.State
             objCmd.CommandText = "PR_State_SelectAll";
             SqlDataReader objSDR = objCmd.ExecuteReader();
 
-            gvState.DataSource = objSDR;
-            gvState.DataBind();
+            if (objSDR.HasRows)
+            {
+                gvState.DataSource = objSDR;
+                gvState.DataBind();
+            }
 
             objConn.Close();
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -20,8 +21,7 @@ namespace Project5.AdminPanel.ContactCategory
         {
             SqlString strContactCategoryName= SqlString.Null;
 
-            SqlConnection objConn = new SqlConnection();
-            objConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             objConn.Open();
 
             SqlCommand objCmd = objConn.CreateCommand();

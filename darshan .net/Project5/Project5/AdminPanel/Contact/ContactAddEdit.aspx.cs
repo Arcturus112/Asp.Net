@@ -35,8 +35,7 @@ namespace Project5.AdminPanel.Contact
 
         private void FillCountryDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
@@ -61,8 +60,7 @@ namespace Project5.AdminPanel.Contact
 
         private void FillStateDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
@@ -88,8 +86,7 @@ namespace Project5.AdminPanel.Contact
 
         private void FillCityDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
@@ -115,8 +112,7 @@ namespace Project5.AdminPanel.Contact
 
         private void FillContactCategoryDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
@@ -278,8 +274,7 @@ namespace Project5.AdminPanel.Contact
                 strLinkedINID = txtLinkedinID.Text.Trim();
             }
 
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();

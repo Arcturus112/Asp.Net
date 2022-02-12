@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -22,8 +23,7 @@ namespace Project5.AdminPanel.City
 
         private void FillDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
@@ -94,8 +94,7 @@ namespace Project5.AdminPanel.City
                 strPinCode = txtPinCode.Text.Trim();
             }
 
-            SqlConnection sqlConn = new SqlConnection();
-            sqlConn.ConnectionString = "data source=DESKTOP-6H43U15;initial catalog=AddressBook;Integrated Security=True";
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             sqlConn.Open();
 
             SqlCommand objCmd = sqlConn.CreateCommand();
