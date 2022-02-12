@@ -19,7 +19,7 @@
                     Country :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlCountryID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCountryID" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlCountryID_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                     State :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlStateID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlStateID" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlStateID_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@
                     City :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlCityID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCityID" runat="server" CssClass="form-control" EnableViewState="False"></asp:DropDownList>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
                     BirthDate :
                 </div>
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtBirthDate" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtBirthDate" runat="server" CssClass="form-control" type="date"></asp:TextBox>
                 </div>
             </div>
 
@@ -141,11 +141,8 @@
             </div>
 
             <div class="row m-3">
-                <div class="col-md-4">
-
-                </div>
-                <div class="col-md-8">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark"/>
+                <div class="col-md-12 m-5 d-flex justify-content-center">
+                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark" OnClick="btnSave_Click"/>
                 </div>
             </div>
         </div>

@@ -8,8 +8,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            Display The List Of Contact
+        Display The List Of Contact
+        <div class="col-md-12" style="width: 100%; height: 100%; overflow: scroll">
             <asp:GridView ID="gvContact" runat="server"></asp:GridView>
         </div>
     </div>
