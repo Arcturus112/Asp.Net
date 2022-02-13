@@ -79,6 +79,7 @@
     <Content Include="AdminPanel\State\StateList.aspx" />
     <Content Include="Content\CSS\bootstrap-theme.min.css" />
     <Content Include="Content\CSS\bootstrap.min.css" />
+    <Content Include="Content\Images\trash-bin.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\AddressBook.Master" />
+    <Content Include="App_Themes\Red\redSkin.skin" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

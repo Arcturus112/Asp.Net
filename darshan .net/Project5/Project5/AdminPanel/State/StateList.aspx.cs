@@ -23,20 +23,31 @@ namespace Project5.AdminPanel.State
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            objConn.Open();
-            SqlCommand objCmd = new SqlCommand();
-            objCmd.Connection = objConn;
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_State_SelectAll";
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
-            if (objSDR.HasRows)
+            try
             {
-                gvState.DataSource = objSDR;
-                gvState.DataBind();
-            }
+                objConn.Open();
+                SqlCommand objCmd = new SqlCommand();
+                objCmd.Connection = objConn;
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_State_SelectAll";
+                SqlDataReader objSDR = objCmd.ExecuteReader();
 
-            objConn.Close();
+                if (objSDR.HasRows)
+                {
+                    gvState.DataSource = objSDR;
+                    gvState.DataBind();
+                }
+
+                objConn.Close();
+            }
+            catch(Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
 
         protected void gvState_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -55,15 +66,26 @@ namespace Project5.AdminPanel.State
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
 
-            objConn.Open();
-            SqlCommand objCmd = objConn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_State_DeleteByPK";
-            objCmd.Parameters.AddWithValue("@StateID", StateID.ToString());
-            objCmd.ExecuteNonQuery();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = objConn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_State_DeleteByPK";
+                objCmd.Parameters.AddWithValue("@StateID", StateID.ToString());
+                objCmd.ExecuteNonQuery();
 
-            objConn.Close();
-            FillGridView();
+                objConn.Close();
+                FillGridView();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text=ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
     }
 }

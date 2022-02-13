@@ -15,7 +15,18 @@ namespace Project5.AdminPanel.Country
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                if (Request.QueryString["CountryID"] != null)
+                {
+                    lblMassage.Text = "Edit Mode";
+                    FillControls(Convert.ToInt32(Request.QueryString["CountryID"]));
+                }
+                else
+                {
+                    lblMassage.Text = "Add Mode";
+                }
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -24,32 +35,131 @@ namespace Project5.AdminPanel.Country
             SqlString strCountryCode = SqlString.Null;
 
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            objConn.Open();
-
-            SqlCommand objCmd = objConn.CreateCommand();
-
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Country_Insert";
-
-            if(txtCountryName.Text.Trim() != "")
+            try
             {
-                strCountryName = txtCountryName.Text.Trim();
-                objCmd.Parameters.AddWithValue("@CountryName", strCountryName);
+                string strErrorMassage = "";
+
+                if (txtCountryCode.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Country Code - <br/>";
+                }
+                if (txtCountryName.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Country Name - <br/>";
+                }
+                if (strErrorMassage.Trim() != "")
+                {
+                    lblMassage.Text = strErrorMassage;
+                    return;
+                }
+
+                objConn.Open();
+
+                SqlCommand objCmd = objConn.CreateCommand();
+
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+
+
+                if (txtCountryName.Text.Trim() != "")
+                {
+                    strCountryName = txtCountryName.Text.Trim();
+                    objCmd.Parameters.AddWithValue("@CountryName", strCountryName);
+                }
+
+                if (txtCountryCode.Text.Trim() != "")
+                {
+                    strCountryCode = txtCountryCode.Text.Trim();
+                    objCmd.Parameters.AddWithValue("@CountryCode", strCountryCode);
+                }
+
+                if (Request.QueryString["CountryID"] != null)
+                {
+                    #region Edit Record
+                    objCmd.Parameters.AddWithValue("@CountryID", Request.QueryString["CountryID"].ToString().Trim());
+                    objCmd.CommandText = "PR_Country_UpdatePK";
+                    objCmd.ExecuteNonQuery();
+                    Response.Redirect("~/AdminPanel/Country/CountryList.aspx", true);
+                    #endregion Edit Record
+                }
+                else
+                {
+                    #region Add Record
+                    objCmd.CommandText = "PR_Country_Insert";
+                    objCmd.ExecuteNonQuery();
+                    lblMassage.Text = "Data Inserted Successfully";
+                    txtCountryName.Text = "";
+                    txtCountryCode.Text = "";
+                    txtCountryName.Focus();
+                    #endregion Add Record
+                }
+                objConn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
             }
 
-            if(txtCountryCode.Text.Trim() != "")
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminPanel/Country/CountryList.aspx", true);
+        }
+
+        private void FillControls(SqlInt32 CountryID)
+        {
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+
+            try
             {
-                strCountryCode = txtCountryCode.Text.Trim();
-                objCmd.Parameters.AddWithValue("@CountryCode", strCountryCode);
+                #region Set Connection & Command Object
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Country_SelectByPK";
+                objCmd.Parameters.AddWithValue("@CountryID", CountryID.ToString().Trim());
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+                #endregion Set Connection & Command Object
+                #region Read the Value And Set The Controls
+                if (objSDR.HasRows == true)
+                {
+                    while (objSDR.Read())
+                    {
+                        if (!objSDR["CountryName"].Equals(DBNull.Value))
+                        {
+                            txtCountryName.Text = objSDR["CountryName"].ToString().Trim();
+                        }
+                        if (!objSDR["CountryCode"].Equals(DBNull.Value))
+                        {
+                            txtCountryCode.Text = objSDR["CountryCode"].ToString().Trim();
+                        }
+                        break;
+                    }
+                }
+                else
+                {
+                    lblMassage.Text = "No Data Available For The CountryID = " + CountryID.ToString().Trim();
+                }
+                #endregion Read the Value And Set The Controls
+                sqlConn.Close();
             }
-
-            objCmd.ExecuteNonQuery();
-
-            objConn.Close();
-            lblMassage.Text = "Data Inserted Successfully";
-            txtCountryName.Text = "";
-            txtCountryCode.Text = "";
-            txtCountryName.Focus();
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
         }
     }
 }

@@ -33,15 +33,6 @@ namespace Project5.AdminPanel.State
         protected global::System.Web.UI.WebControls.DropDownList ddlCountryID;
 
         /// <summary>
-        /// txtStateID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStateID;
-
-        /// <summary>
         /// txtStateName control.
         /// </summary>
         /// <remarks>
@@ -51,6 +42,15 @@ namespace Project5.AdminPanel.State
         protected global::System.Web.UI.WebControls.TextBox txtStateName;
 
         /// <summary>
+        /// txtStateCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStateCode;
+
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
@@ -58,5 +58,14 @@ namespace Project5.AdminPanel.State
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSave;
+
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }

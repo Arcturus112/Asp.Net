@@ -24,17 +24,28 @@ namespace Project5.AdminPanel.Contact
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            objConn.Open();
-            SqlCommand objCmd = new SqlCommand();
-            objCmd.Connection = objConn;
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Contact_SelectAll";
-            SqlDataReader objSDR = objCmd.ExecuteReader();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = new SqlCommand();
+                objCmd.Connection = objConn;
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Contact_SelectAll";
+                SqlDataReader objSDR = objCmd.ExecuteReader();
 
-            gvContact.DataSource = objSDR;
-            gvContact.DataBind();
+                gvContact.DataSource = objSDR;
+                gvContact.DataBind();
 
-            objConn.Close();
+                objConn.Close();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
 
         protected void gvContact_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -52,15 +63,26 @@ namespace Project5.AdminPanel.Contact
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
 
-            objConn.Open();
-            SqlCommand objCmd = objConn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Contact_DeleteByPK";
-            objCmd.Parameters.AddWithValue("@ContactID", ContactID.ToString());
-            objCmd.ExecuteNonQuery();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = objConn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Contact_DeleteByPK";
+                objCmd.Parameters.AddWithValue("@ContactID", ContactID.ToString());
+                objCmd.ExecuteNonQuery();
 
-            objConn.Close();
-            FillGridView();
+                objConn.Close();
+                FillGridView();
+            }
+            catch(Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
     }
 }

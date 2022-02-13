@@ -20,6 +20,16 @@ namespace Project5.AdminPanel.Contact
             {
                 FillCountryDropDownList();
                 FillContactCategoryDropDownList();
+
+                if (Request.QueryString["ContactID"] != null)
+                {
+                    lblMassage.Text = "Edit Mode";
+                    FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
+                }
+                else
+                {
+                    lblMassage.Text = "Add Mode";
+                }
             }
         }
 
@@ -36,103 +46,246 @@ namespace Project5.AdminPanel.Contact
         private void FillCountryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            sqlConn.Open();
-
-            SqlCommand objCmd = sqlConn.CreateCommand();
-
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Country_SelectForDropDownList";
-
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
-            if (objSDR.HasRows == true)
+            try
             {
-                ddlCountryID.DataSource = objSDR;
-                ddlCountryID.DataValueField = "CountryID";
-                ddlCountryID.DataTextField = "CountryName";
-                ddlCountryID.DataBind();
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Country_SelectForDropDownList";
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+
+                if (objSDR.HasRows == true)
+                {
+                    ddlCountryID.DataSource = objSDR;
+                    ddlCountryID.DataValueField = "CountryID";
+                    ddlCountryID.DataTextField = "CountryName";
+                    ddlCountryID.DataBind();
+                }
+
+                ddlCountryID.Items.Insert(0, new ListItem("Select Country", "-1"));
+
+                sqlConn.Close();
             }
-
-            ddlCountryID.Items.Insert(0, new ListItem("Select Country", "-1"));
-
-            sqlConn.Close();
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
         }
 
         private void FillStateDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            sqlConn.Open();
-
-            SqlCommand objCmd = sqlConn.CreateCommand();
-
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
-            objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
-
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
-            if (objSDR.HasRows == true)
+            try
             {
-                ddlStateID.DataSource = objSDR;
-                ddlStateID.DataValueField = "StateID";
-                ddlStateID.DataTextField = "StateName";
-                ddlStateID.DataBind();
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
+                objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+
+                if (objSDR.HasRows == true)
+                {
+                    ddlStateID.DataSource = objSDR;
+                    ddlStateID.DataValueField = "StateID";
+                    ddlStateID.DataTextField = "StateName";
+                    ddlStateID.DataBind();
+                }
+
+                ddlStateID.Items.Insert(0, new ListItem("Select State", "-1"));
+
+                sqlConn.Close();
             }
-
-            ddlStateID.Items.Insert(0, new ListItem("Select State", "-1"));
-
-            sqlConn.Close();
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
         }
 
         private void FillCityDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            sqlConn.Open();
-
-            SqlCommand objCmd = sqlConn.CreateCommand();
-
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
-            objCmd.Parameters.AddWithValue("@StateID", ddlStateID.SelectedValue);
-
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
-            if (objSDR.HasRows == true)
+            try
             {
-                ddlCityID.DataSource = objSDR;
-                ddlCityID.DataValueField = "CityID";
-                ddlCityID.DataTextField = "CityName";
-                ddlCityID.DataBind();
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
+                objCmd.Parameters.AddWithValue("@StateID", ddlStateID.SelectedValue);
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+
+                if (objSDR.HasRows == true)
+                {
+                    ddlCityID.DataSource = objSDR;
+                    ddlCityID.DataValueField = "CityID";
+                    ddlCityID.DataTextField = "CityName";
+                    ddlCityID.DataBind();
+                }
+
+                ddlCityID.Items.Insert(0, new ListItem("Select City", "-1"));
+
+                sqlConn.Close();
             }
-
-            ddlCityID.Items.Insert(0, new ListItem("Select City", "-1"));
-
-            sqlConn.Close();
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
         }
 
         private void FillContactCategoryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            sqlConn.Open();
-
-            SqlCommand objCmd = sqlConn.CreateCommand();
-
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_ContactCategory_SelectForDropDownList";
-
-            SqlDataReader objSDR = objCmd.ExecuteReader();
-
-            if (objSDR.HasRows == true)
+            try
             {
-                ddlContactCategoryID.DataSource = objSDR;
-                ddlContactCategoryID.DataValueField = "ContactCategoryID";
-                ddlContactCategoryID.DataTextField = "ContactCategoryName";
-                ddlContactCategoryID.DataBind();
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_ContactCategory_SelectForDropDownList";
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+
+                if (objSDR.HasRows == true)
+                {
+                    ddlContactCategoryID.DataSource = objSDR;
+                    ddlContactCategoryID.DataValueField = "ContactCategoryID";
+                    ddlContactCategoryID.DataTextField = "ContactCategoryName";
+                    ddlContactCategoryID.DataBind();
+                }
+
+                ddlContactCategoryID.Items.Insert(0, new ListItem("Select Contact Category", "-1"));
+
+                sqlConn.Close();
             }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
 
-            ddlContactCategoryID.Items.Insert(0, new ListItem("Select Contact Category", "-1"));
+        private void FillControls(SqlInt32 ContactID)
+        {
+            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            try
+            {
+                #region Set Connection & Command Object
+                sqlConn.Open();
 
-            sqlConn.Close();
+                SqlCommand objCmd = sqlConn.CreateCommand();
+
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Contact_SelectByPK";
+                objCmd.Parameters.AddWithValue("@ContactID", ContactID.ToString().Trim());
+
+                SqlDataReader objSDR = objCmd.ExecuteReader();
+                #endregion Set Connection & Command Object
+                #region Read the Value And Set The Controls
+                if (objSDR.HasRows == true)
+                {
+                    while (objSDR.Read())
+                    {
+                        if (!objSDR["ContactName"].Equals(DBNull.Value))
+                        {
+                            txtContactName.Text = objSDR["ContactName"].ToString().Trim();
+                        }
+                        if (!objSDR["ContactNo"].Equals(DBNull.Value))
+                        {
+                            txtContactNo.Text = objSDR["ContactNo"].ToString().Trim();
+                        }
+                        if (!objSDR["WhatsAppNo"].Equals(DBNull.Value))
+                        {
+                            txtWhatsAppNo.Text = objSDR["WhatsAppNo"].ToString().Trim();
+                        }
+                        if (!objSDR["BirthDate"].Equals(DBNull.Value))
+                        {
+                            txtBirthDate.Text = objSDR["BirthDate"].ToString().Trim();
+                        }
+                        if (!objSDR["Email"].Equals(DBNull.Value))
+                        {
+                            txtEmail.Text = objSDR["Email"].ToString().Trim();
+                        }
+                        if (!objSDR["Age"].Equals(DBNull.Value))
+                        {
+                            txtAge.Text = objSDR["Age"].ToString().Trim();
+                        }
+                        if (!objSDR["Address"].Equals(DBNull.Value))
+                        {
+                            txtAddress.Text = objSDR["Address"].ToString().Trim();
+                        }
+                        if (!objSDR["BloodGroup"].Equals(DBNull.Value))
+                        {
+                            txtBloodGroup.Text = objSDR["BloodGroup"].ToString().Trim();
+                        }
+                        if (!objSDR["FacebookID"].Equals(DBNull.Value))
+                        {
+                            txtFacebookID.Text = objSDR["FacebookID"].ToString().Trim();
+                        }
+                        if (!objSDR["LinkedINID"].Equals(DBNull.Value))
+                        {
+                            txtLinkedinID.Text = objSDR["LinkedINID"].ToString().Trim();
+                        }
+
+
+                        if (!objSDR["CountryID"].Equals(DBNull.Value))
+                        {
+                            ddlCountryID.SelectedValue = objSDR["CountryID"].ToString().Trim();
+                        }
+                        if (!objSDR["StateID"].Equals(DBNull.Value))
+                        {
+                            ddlStateID.SelectedValue = objSDR["StateID"].ToString().Trim();
+                        }
+                        if (!objSDR["CityID"].Equals(DBNull.Value))
+                        {
+                            ddlCityID.SelectedValue = objSDR["CityID"].ToString().Trim();
+                        }
+                        if (!objSDR["ContactCategoryID"].Equals(DBNull.Value))
+                        {
+                            ddlContactCategoryID.SelectedValue = objSDR["ContactCategoryID"].ToString().Trim();
+                        }
+                        break;
+                    }
+                }
+                else
+                {
+                    lblMassage.Text = "No Data Available For The ContactID = " + ContactID.ToString().Trim();
+                }
+                #endregion Read the Value And Set The Controls
+                sqlConn.Close();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -152,171 +305,201 @@ namespace Project5.AdminPanel.Contact
             SqlString strFacebookID = SqlString.Null;
             SqlString strLinkedINID = SqlString.Null;
 
-
-            string strErrorMassage = "";
-
-            if (ddlCountryID.SelectedIndex == 0)
-            {
-                strErrorMassage += "- Select Country - <br/>";
-            }
-            if (ddlStateID.SelectedIndex == 0)
-            {
-                strErrorMassage += "- Select State - <br/>";
-            }
-            if (ddlCityID.SelectedIndex == 0)
-            {
-                strErrorMassage += "- Select City - <br/>";
-            }
-            if (ddlContactCategoryID.SelectedIndex == 0)
-            {
-                strErrorMassage += "- Select Contact Category - <br/>";
-            }
-            if (txtContactName.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Contact Name - <br/>";
-            }
-            if (txtContactNo.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Contact No - <br/>";
-            }
-            if (txtWhatsAppNo.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter WhatsApp No - <br/>";
-            }
-            if (txtBirthDate.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter BirthDate - <br/>";
-            }
-            if (txtEmail.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Email - <br/>";
-            }
-            if (txtAge.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Age - <br/>";
-            }
-            if (txtAddress.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Address - <br/>";
-            }
-            if (txtBloodGroup.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter BloodGroup - <br/>";
-            }
-            if (txtFacebookID.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Facebook ID - <br/>";
-            }
-            if (txtLinkedinID.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter LinkedIN ID - <br/>";
-            }
-            if (strErrorMassage.Trim() != "")
-            {
-                lblMassage.Text = strErrorMassage;
-                return;
-            }
-
-            if (ddlStateID.SelectedIndex > 0)
-            {
-                strStateID = Convert.ToInt32(ddlStateID.SelectedValue);
-            }
-            if (ddlCountryID.SelectedIndex > 0)
-            {
-                strCountryID = Convert.ToInt32(ddlCountryID.SelectedValue);
-            }
-            if (ddlCityID.SelectedIndex > 0)
-            {
-                strCityID = Convert.ToInt32(ddlCityID.SelectedValue);
-            }
-            if (ddlContactCategoryID.SelectedIndex > 0)
-            {
-                strContactCategoryID = Convert.ToInt32(ddlContactCategoryID.SelectedValue);
-            }
-            if (txtContactName.Text.Trim() != "")
-            {
-                strContactName = txtContactName.Text.Trim();
-            }
-            if (txtContactNo.Text.Trim() != "")
-            {
-                strContactNo = txtContactNo.Text.Trim();
-            }
-            if (txtWhatsAppNo.Text.Trim() != "")
-            {
-                strWhatsAppNo = txtWhatsAppNo.Text.Trim();
-            }
-            if (txtBirthDate.Text.Trim() != "")
-            {
-                strBirthDate = txtBirthDate.Text.Trim();
-            }
-            if (txtEmail.Text.Trim() != "")
-            {
-                strEmail = txtEmail.Text.Trim();
-            }
-            if (txtAge.Text.Trim() != "")
-            {
-                strAge = txtAge.Text.Trim();
-            }
-            if (txtAddress.Text.Trim() != "")
-            {
-                strAddress = txtAddress.Text.Trim();
-            }
-            if (txtBloodGroup.Text.Trim() != "")
-            {
-                strBloodGroup = txtBloodGroup.Text.Trim();
-            }
-            if (txtFacebookID.Text.Trim() != "")
-            {
-                strFacebookID = txtFacebookID.Text.Trim();
-            }
-            if (txtLinkedinID.Text.Trim() != "")
-            {
-                strLinkedINID = txtLinkedinID.Text.Trim();
-            }
-
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            sqlConn.Open();
 
-            SqlCommand objCmd = sqlConn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Contact_Insert";
 
-            objCmd.Parameters.AddWithValue("@CountryID", strCountryID);
-            objCmd.Parameters.AddWithValue("@StateID", strStateID);
-            objCmd.Parameters.AddWithValue("@CityID", strCityID);
-            objCmd.Parameters.AddWithValue("@ContactCategoryID", strContactCategoryID);
-            objCmd.Parameters.AddWithValue("@ContactName", strContactName);
-            objCmd.Parameters.AddWithValue("@ContactNo", strContactNo);
-            objCmd.Parameters.AddWithValue("@WhatsAppNo", strWhatsAppNo);
-            objCmd.Parameters.AddWithValue("@BirthDate", strBirthDate);
-            objCmd.Parameters.AddWithValue("@Email", strEmail);
-            objCmd.Parameters.AddWithValue("@Age", strAge);
-            objCmd.Parameters.AddWithValue("@Address", strAddress);
-            objCmd.Parameters.AddWithValue("@BloodGroup", strBloodGroup);
-            objCmd.Parameters.AddWithValue("@FacebookID", strFacebookID);
-            objCmd.Parameters.AddWithValue("@LinkedINID", strLinkedINID);
+            try
+            {
+                string strErrorMassage = "";
 
-            objCmd.ExecuteNonQuery();
+                if (ddlCountryID.SelectedIndex == 0)
+                {
+                    strErrorMassage += "- Select Country - <br/>";
+                }
+                if (ddlStateID.SelectedIndex == 0)
+                {
+                    strErrorMassage += "- Select State - <br/>";
+                }
+                if (ddlCityID.SelectedIndex == 0)
+                {
+                    strErrorMassage += "- Select City - <br/>";
+                }
+                if (ddlContactCategoryID.SelectedIndex == 0)
+                {
+                    strErrorMassage += "- Select Contact Category - <br/>";
+                }
+                if (txtContactName.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Contact Name - <br/>";
+                }
+                if (txtContactNo.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Contact No - <br/>";
+                }
+                if (txtWhatsAppNo.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter WhatsApp No - <br/>";
+                }
+                if (txtBirthDate.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter BirthDate - <br/>";
+                }
+                if (txtEmail.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Email - <br/>";
+                }
+                if (txtAge.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Age - <br/>";
+                }
+                if (txtAddress.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Address - <br/>";
+                }
+                if (txtBloodGroup.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter BloodGroup - <br/>";
+                }
+                if (txtFacebookID.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Facebook ID - <br/>";
+                }
+                if (txtLinkedinID.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter LinkedIN ID - <br/>";
+                }
+                if (strErrorMassage.Trim() != "")
+                {
+                    lblMassage.Text = strErrorMassage;
+                    return;
+                }
 
-            sqlConn.Close();
+                if (ddlStateID.SelectedIndex > 0)
+                {
+                    strStateID = Convert.ToInt32(ddlStateID.SelectedValue);
+                }
+                if (ddlCountryID.SelectedIndex > 0)
+                {
+                    strCountryID = Convert.ToInt32(ddlCountryID.SelectedValue);
+                }
+                if (ddlCityID.SelectedIndex > 0)
+                {
+                    strCityID = Convert.ToInt32(ddlCityID.SelectedValue);
+                }
+                if (ddlContactCategoryID.SelectedIndex > 0)
+                {
+                    strContactCategoryID = Convert.ToInt32(ddlContactCategoryID.SelectedValue);
+                }
+                if (txtContactName.Text.Trim() != "")
+                {
+                    strContactName = txtContactName.Text.Trim();
+                }
+                if (txtContactNo.Text.Trim() != "")
+                {
+                    strContactNo = txtContactNo.Text.Trim();
+                }
+                if (txtWhatsAppNo.Text.Trim() != "")
+                {
+                    strWhatsAppNo = txtWhatsAppNo.Text.Trim();
+                }
+                if (txtBirthDate.Text.Trim() != "")
+                {
+                    strBirthDate = txtBirthDate.Text.Trim();
+                }
+                if (txtEmail.Text.Trim() != "")
+                {
+                    strEmail = txtEmail.Text.Trim();
+                }
+                if (txtAge.Text.Trim() != "")
+                {
+                    strAge = txtAge.Text.Trim();
+                }
+                if (txtAddress.Text.Trim() != "")
+                {
+                    strAddress = txtAddress.Text.Trim();
+                }
+                if (txtBloodGroup.Text.Trim() != "")
+                {
+                    strBloodGroup = txtBloodGroup.Text.Trim();
+                }
+                if (txtFacebookID.Text.Trim() != "")
+                {
+                    strFacebookID = txtFacebookID.Text.Trim();
+                }
+                if (txtLinkedinID.Text.Trim() != "")
+                {
+                    strLinkedINID = txtLinkedinID.Text.Trim();
+                }
 
-            
-            ddlCountryID.SelectedIndex = 0;
-            ddlStateID.SelectedIndex = 0;
-            ddlCityID.SelectedIndex = 0;
-            ddlContactCategoryID.SelectedIndex = 0;
-            txtContactName.Text = "";
-            txtContactNo.Text = "";
-            txtWhatsAppNo.Text = "";
-            txtBirthDate.Text = "";
-            txtEmail.Text = "";
-            txtAge.Text = "";
-            txtAddress.Text = "";
-            txtBloodGroup.Text = "";
-            txtFacebookID.Text = "";
-            txtLinkedinID.Text = "";
-            ddlCountryID.Focus();
-            lblMassage.Text = "Data Inserted Successfully";
+                sqlConn.Open();
+
+                SqlCommand objCmd = sqlConn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                
+
+                objCmd.Parameters.AddWithValue("@CountryID", strCountryID);
+                objCmd.Parameters.AddWithValue("@StateID", strStateID);
+                objCmd.Parameters.AddWithValue("@CityID", strCityID);
+                objCmd.Parameters.AddWithValue("@ContactCategoryID", strContactCategoryID);
+                objCmd.Parameters.AddWithValue("@ContactName", strContactName);
+                objCmd.Parameters.AddWithValue("@ContactNo", strContactNo);
+                objCmd.Parameters.AddWithValue("@WhatsAppNo", strWhatsAppNo);
+                objCmd.Parameters.AddWithValue("@BirthDate", strBirthDate);
+                objCmd.Parameters.AddWithValue("@Email", strEmail);
+                objCmd.Parameters.AddWithValue("@Age", strAge);
+                objCmd.Parameters.AddWithValue("@Address", strAddress);
+                objCmd.Parameters.AddWithValue("@BloodGroup", strBloodGroup);
+                objCmd.Parameters.AddWithValue("@FacebookID", strFacebookID);
+                objCmd.Parameters.AddWithValue("@LinkedINID", strLinkedINID);
+
+                if (Request.QueryString["StateID"] != null)
+                {
+                    #region Edit Record
+                    objCmd.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
+                    objCmd.CommandText = "PR_Contact_UpdatePK";
+                    objCmd.ExecuteNonQuery();
+                    Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
+                    #endregion Edit Record
+                }
+                else
+                {
+                    #region Add Record
+                    objCmd.CommandText = "PR_Contact_Insert";
+                    objCmd.ExecuteNonQuery();
+                    ddlCountryID.SelectedIndex = 0;
+                    ddlStateID.SelectedIndex = 0;
+                    ddlCityID.SelectedIndex = 0;
+                    ddlContactCategoryID.SelectedIndex = 0;
+                    txtContactName.Text = "";
+                    txtContactNo.Text = "";
+                    txtWhatsAppNo.Text = "";
+                    txtBirthDate.Text = "";
+                    txtEmail.Text = "";
+                    txtAge.Text = "";
+                    txtAddress.Text = "";
+                    txtBloodGroup.Text = "";
+                    txtFacebookID.Text = "";
+                    txtLinkedinID.Text = "";
+                    ddlCountryID.Focus();
+                    lblMassage.Text = "Data Inserted Successfully";
+                    #endregion Add Record
+                }
+
+                sqlConn.Close();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                sqlConn.Close();
+            }
+        }
+
+        protected void btnCancel_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
     }
 }

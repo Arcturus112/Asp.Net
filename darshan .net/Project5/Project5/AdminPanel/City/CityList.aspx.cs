@@ -24,17 +24,28 @@ namespace Project5.AdminPanel.City
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            objConn.Open();
-            SqlCommand objCmd = new SqlCommand();
-            objCmd.Connection = objConn;
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_City_SelectAll";
-            SqlDataReader objSDR = objCmd.ExecuteReader();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = new SqlCommand();
+                objCmd.Connection = objConn;
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_City_SelectAll";
+                SqlDataReader objSDR = objCmd.ExecuteReader();
 
-            gvCity.DataSource = objSDR;
-            gvCity.DataBind();
+                gvCity.DataSource = objSDR;
+                gvCity.DataBind();
 
-            objConn.Close();
+                objConn.Close();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
 
         protected void gvCity_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -52,15 +63,26 @@ namespace Project5.AdminPanel.City
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
 
-            objConn.Open();
-            SqlCommand objCmd = objConn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_City_DeleteByPK";
-            objCmd.Parameters.AddWithValue("@CityID", CityID.ToString());
-            objCmd.ExecuteNonQuery();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = objConn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_City_DeleteByPK";
+                objCmd.Parameters.AddWithValue("@CityID", CityID.ToString());
+                objCmd.ExecuteNonQuery();
 
-            objConn.Close();
-            FillGridView();
+                objConn.Close();
+                FillGridView();
+            }
+            catch(Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
     }
 }

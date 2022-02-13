@@ -15,6 +15,24 @@ namespace Project5.AdminPanel.Contact
     {
 
         /// <summary>
+        /// lblMassage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMassage;
+
+        /// <summary>
+        /// hlAddContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAddContact;
+
+        /// <summary>
         /// gvContact control.
         /// </summary>
         /// <remarks>

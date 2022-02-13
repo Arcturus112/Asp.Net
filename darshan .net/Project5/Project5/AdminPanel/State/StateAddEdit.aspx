@@ -25,15 +25,6 @@
 
             <div class="row m-3">
                 <div class="col-md-4">
-                    State ID :
-                </div>
-                <div class="col-md-8">
-                    <asp:TextBox ID="txtStateID" runat="server" CssClass="form-control" placeholder="EX: GJ For Gujarat"></asp:TextBox>
-                </div>
-            </div>
-
-            <div class="row m-3">
-                <div class="col-md-4">
                     State Name :
                 </div>
                 <div class="col-md-8">
@@ -43,10 +34,20 @@
 
             <div class="row m-3">
                 <div class="col-md-4">
+                    State Code :
+                </div>
+                <div class="col-md-8">
+                    <asp:TextBox ID="txtStateCode" runat="server" CssClass="form-control" placeholder="EX: GJ For Gujarat"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row m-3">
+                <div class="col-md-4">
 
                 </div>
                 <div class="col-md-8">
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark" OnClick="btnSave_Click"/>
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-danger m-2" OnClick="btnCancel_Click"/>
                 </div>
             </div>
         </div>

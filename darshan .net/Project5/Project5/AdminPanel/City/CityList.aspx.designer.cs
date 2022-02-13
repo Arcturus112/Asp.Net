@@ -15,6 +15,24 @@ namespace Project5.AdminPanel.City
     {
 
         /// <summary>
+        /// lblMassage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMassage;
+
+        /// <summary>
+        /// hlAddCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAddCity;
+
+        /// <summary>
         /// gvCity control.
         /// </summary>
         /// <remarks>

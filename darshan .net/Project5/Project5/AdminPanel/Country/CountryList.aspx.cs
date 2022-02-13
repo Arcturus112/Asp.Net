@@ -24,17 +24,28 @@ namespace Project5.AdminPanel.Country
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            objConn.Open();
-            SqlCommand objCmd = new SqlCommand();
-            objCmd.Connection = objConn;
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Country_SelectAll";
-            SqlDataReader objSDR = objCmd.ExecuteReader();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = new SqlCommand();
+                objCmd.Connection = objConn;
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Country_SelectAll";
+                SqlDataReader objSDR = objCmd.ExecuteReader();
 
-            gvCountry.DataSource = objSDR;
-            gvCountry.DataBind();
+                gvCountry.DataSource = objSDR;
+                gvCountry.DataBind();
 
-            objConn.Close();
+                objConn.Close();
+            }
+            catch (Exception ex)
+            {
+                lblMassage.Text = ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
 
         protected void gvCountry_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -52,15 +63,26 @@ namespace Project5.AdminPanel.Country
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
 
-            objConn.Open();
-            SqlCommand objCmd = objConn.CreateCommand();
-            objCmd.CommandType = CommandType.StoredProcedure;
-            objCmd.CommandText = "PR_Country_DeleteByPK";
-            objCmd.Parameters.AddWithValue("@CountryID", CountryID.ToString());
-            objCmd.ExecuteNonQuery();
+            try
+            {
+                objConn.Open();
+                SqlCommand objCmd = objConn.CreateCommand();
+                objCmd.CommandType = CommandType.StoredProcedure;
+                objCmd.CommandText = "PR_Country_DeleteByPK";
+                objCmd.Parameters.AddWithValue("@CountryID", CountryID.ToString());
+                objCmd.ExecuteNonQuery();
 
-            objConn.Close();
-            FillGridView();
+                objConn.Close();
+                FillGridView();
+            }
+            catch(Exception ex)
+            {
+                lblMassage.Text =ex.Message;
+            }
+            finally
+            {
+                objConn.Close();
+            }
         }
     }
 }

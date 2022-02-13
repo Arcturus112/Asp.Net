@@ -24,6 +24,15 @@ namespace Project5.AdminPanel.State
         protected global::System.Web.UI.WebControls.Label lblMassage;
 
         /// <summary>
+        /// hlAddCState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlAddCState;
+
+        /// <summary>
         /// gvState control.
         /// </summary>
         /// <remarks>
