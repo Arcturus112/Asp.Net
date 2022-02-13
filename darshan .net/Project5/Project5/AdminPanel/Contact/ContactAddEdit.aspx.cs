@@ -41,17 +41,7 @@ namespace Project5.AdminPanel.Contact
         }
         #endregion Load Event
 
-
-        protected void ddlCountryID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        protected void ddlStateID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+        #region Fill Country DropDownList
         private void FillCountryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -87,7 +77,9 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion Fill Country DropDownList
 
+        #region Fill State DropDownList
         private void FillStateDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -123,7 +115,9 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion Fill State DropDownList
 
+        #region Fill City DropDownList
         private void FillCityDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -159,7 +153,9 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion Fill City DropDownList
 
+        #region Fill ContactCategory DropDownList
         private void FillContactCategoryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -195,7 +191,9 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion Fill ContactCategory DropDownList
 
+        #region FillControls
         private void FillControls(SqlInt32 ContactID)
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -294,7 +292,9 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion FillControls
 
+        #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SqlInt32 strCountryID = SqlInt32.Null;
@@ -504,12 +504,15 @@ namespace Project5.AdminPanel.Contact
                 sqlConn.Close();
             }
         }
+        #endregion Button : Save
 
+        #region Button : Cancel
         protected void btnCancel_Click1(object sender, EventArgs e)
         {
             Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
+        #endregion Button : Cancel
 
-        
+
     }
 }

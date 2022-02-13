@@ -13,6 +13,7 @@ namespace Project5.AdminPanel.City
 {
     public partial class CityList : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -20,7 +21,9 @@ namespace Project5.AdminPanel.City
                 FillGridView();
             }
         }
+        #endregion Load Event
 
+        #region Fill GridView
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -47,7 +50,9 @@ namespace Project5.AdminPanel.City
                 objConn.Close();
             }
         }
+        #endregion Fill GridView
 
+        #region gvCity
         protected void gvCity_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "DeleteRecord")
@@ -58,7 +63,9 @@ namespace Project5.AdminPanel.City
                 }
             }
         }
+        #region gvCity
 
+        #region Delete City
         private void DeleteCity(SqlInt32 CityID)
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -84,5 +91,6 @@ namespace Project5.AdminPanel.City
                 objConn.Close();
             }
         }
+        #endregion Delete City
     }
 }

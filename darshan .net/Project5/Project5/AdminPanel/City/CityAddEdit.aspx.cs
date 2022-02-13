@@ -13,6 +13,7 @@ namespace Project5.AdminPanel.City
 {
     public partial class CityAddEdit : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -29,7 +30,9 @@ namespace Project5.AdminPanel.City
                 }
             }
         }
+        #endregion Load Event
 
+        #region Fill DropDownList
         private void FillDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -65,7 +68,9 @@ namespace Project5.AdminPanel.City
                 sqlConn.Close();
             }
         }
+        #endregion Fill DropDownList
 
+        #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SqlInt32 strStateID = SqlInt32.Null;
@@ -164,7 +169,9 @@ namespace Project5.AdminPanel.City
             }
             
         }
+        #endregion Button : Save
 
+        #region FillControls
         private void FillControls(SqlInt32 CityID)
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -222,10 +229,13 @@ namespace Project5.AdminPanel.City
                 sqlConn.Close();
             }
         }
+        #endregion FillControls
 
-            protected void btnCancel_Click(object sender, EventArgs e)
+        #region Button : Cancel
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/AdminPanel/City/CityList.aspx", true);
         }
+        #endregion Button : Cancel
     }
 }
