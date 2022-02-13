@@ -63,7 +63,7 @@ namespace Project5.AdminPanel.City
                 }
             }
         }
-        #region gvCity
+        #endregion gvCity
 
         #region Delete City
         private void DeleteCity(SqlInt32 CityID)
