@@ -13,13 +13,16 @@ namespace Project5.AdminPanel.State
 {
     public partial class StateList : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack){
                 FillGridView();
             }
         }
+        #endregion Load Event
 
+        #region Fill Grid View
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -49,7 +52,9 @@ namespace Project5.AdminPanel.State
                 objConn.Close();
             }
         }
+        #endregion Fill Grid View
 
+        #region gvState
         protected void gvState_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if(e.CommandName == "DeleteRecord")
@@ -61,7 +66,9 @@ namespace Project5.AdminPanel.State
                 }
             }
         }
+        #endregion gvState
 
+        #region Delete State
         private void DeleteState(SqlInt32 StateID)
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -87,5 +94,6 @@ namespace Project5.AdminPanel.State
                 objConn.Close();
             }
         }
+        #endregion Delete State
     }
 }

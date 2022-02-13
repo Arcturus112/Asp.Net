@@ -13,6 +13,7 @@ namespace Project5.AdminPanel.ContactCategory
 {
     public partial class ContactCategoryList : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -20,7 +21,9 @@ namespace Project5.AdminPanel.ContactCategory
                 FillGridView();
             }
         }
+        #endregion Load Event
 
+        #region Fill GridView
         private void FillGridView()
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -47,7 +50,9 @@ namespace Project5.AdminPanel.ContactCategory
                 objConn.Close();
             }
         }
+        #endregion Fill GridView
 
+        #region gvConCat
         protected void gvConCat_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "DeleteRecord")
@@ -58,7 +63,9 @@ namespace Project5.AdminPanel.ContactCategory
                 }
             }
         }
+        #endregion gvConCat
 
+        #region Delete ContactCategory
         private void DeleteContactCategory(SqlInt32 ContactCategoryID)
         {
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -84,5 +91,6 @@ namespace Project5.AdminPanel.ContactCategory
                 objConn.Close();
             }
         }
+        #endregion Delete ContactCategory
     }
 }

@@ -13,6 +13,7 @@ namespace Project5.AdminPanel.Country
 {
     public partial class CountryAddEdit : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -28,7 +29,9 @@ namespace Project5.AdminPanel.Country
                 }
             }
         }
+        #endregion Load Event
 
+        #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SqlString strCountryName = SqlString.Null;
@@ -106,12 +109,16 @@ namespace Project5.AdminPanel.Country
             }
 
         }
+        #endregion Button : Save
 
+        #region Button : Cancel
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/AdminPanel/Country/CountryList.aspx", true);
         }
+        #endregion Button : Cancel
 
+        #region FillControls
         private void FillControls(SqlInt32 CountryID)
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -161,5 +168,6 @@ namespace Project5.AdminPanel.Country
                 sqlConn.Close();
             }
         }
+        #endregion FillControls
     }
 }

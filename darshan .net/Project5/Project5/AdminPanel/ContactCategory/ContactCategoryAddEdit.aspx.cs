@@ -13,6 +13,7 @@ namespace Project5.AdminPanel.ContactCategory
 {
     public partial class ContactCategoryAddEdit : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -28,7 +29,9 @@ namespace Project5.AdminPanel.ContactCategory
                 }
             }
         }
+        #endregion Load Event
 
+        #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
             SqlString strContactCategoryName= SqlString.Null;
@@ -91,7 +94,9 @@ namespace Project5.AdminPanel.ContactCategory
                 objConn.Close();
             }
         }
+        #endregion Button : Save
 
+        #region FillControls
         private void FillControls(SqlInt32 ContactCategoryID)
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
@@ -136,11 +141,13 @@ namespace Project5.AdminPanel.ContactCategory
                 sqlConn.Close();
             }
         }
+        #endregion Button : Cancel
 
-
-            protected void btnCancel_Click(object sender, EventArgs e)
+        #region Button : Cancel
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/AdminPanel/ContactCategory/ContactCategoryList.aspx", true);
         }
+        #endregion Button : Cancel
     }
 }

@@ -14,33 +14,42 @@ namespace Project5.AdminPanel.Contact
 {
     public partial class ContactAddEdit : System.Web.UI.Page
     {
+        #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+
+            if (!Page.IsPostBack)
             {
                 FillCountryDropDownList();
                 FillContactCategoryDropDownList();
+                FillStateDropDownList();
+                FillCityDropDownList();
 
                 if (Request.QueryString["ContactID"] != null)
                 {
-                    lblMassage.Text = "Edit Mode";
+                    lblMassage.Text = "Edit Mode | ContactID = " + Request.QueryString["ContactID"].ToString();
                     FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
+
                 }
                 else
                 {
                     lblMassage.Text = "Add Mode";
                 }
+
+
             }
         }
+        #endregion Load Event
+
 
         protected void ddlCountryID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillStateDropDownList();
+            
         }
 
         protected void ddlStateID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillCityDropDownList();
+            
         }
 
         private void FillCountryDropDownList()
@@ -89,8 +98,7 @@ namespace Project5.AdminPanel.Contact
                 SqlCommand objCmd = sqlConn.CreateCommand();
 
                 objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
-                objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
+                objCmd.CommandText = "PR_State_SelectForDropDownList";
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
@@ -126,8 +134,7 @@ namespace Project5.AdminPanel.Contact
                 SqlCommand objCmd = sqlConn.CreateCommand();
 
                 objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
-                objCmd.Parameters.AddWithValue("@StateID", ddlStateID.SelectedValue);
+                objCmd.CommandText = "PR_City_SelectForDropDownList";
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
@@ -452,7 +459,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.Parameters.AddWithValue("@FacebookID", strFacebookID);
                 objCmd.Parameters.AddWithValue("@LinkedINID", strLinkedINID);
 
-                if (Request.QueryString["StateID"] != null)
+                if (Request.QueryString["ContactID"] != null)
                 {
                     #region Edit Record
                     objCmd.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
@@ -482,6 +489,7 @@ namespace Project5.AdminPanel.Contact
                     txtLinkedinID.Text = "";
                     ddlCountryID.Focus();
                     lblMassage.Text = "Data Inserted Successfully";
+                    Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
                     #endregion Add Record
                 }
 
@@ -501,5 +509,7 @@ namespace Project5.AdminPanel.Contact
         {
             Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
+
+        
     }
 }
