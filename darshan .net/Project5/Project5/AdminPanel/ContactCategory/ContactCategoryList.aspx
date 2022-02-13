@@ -10,7 +10,15 @@
     <div class="row">
         <div class="col-md-12">
             Display The List Of Contact Category
-            <asp:GridView ID="gvConCat" runat="server"></asp:GridView>
+            <asp:GridView ID="gvConCat" runat="server" CssClass="table table-hover" OnRowCommand="gvConCat_RowCommand">
+                <Columns>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument= '<%# Eval("ContactCategoryID") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
         </div>
     </div>
 </asp:Content>
