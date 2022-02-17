@@ -22,8 +22,8 @@ namespace Project5.AdminPanel.Contact
             {
                 FillCountryDropDownList();
                 FillContactCategoryDropDownList();
-                FillStateDropDownList();
-                FillCityDropDownList();
+                
+                
 
                 if (Request.QueryString["ContactID"] != null)
                 {
@@ -90,7 +90,8 @@ namespace Project5.AdminPanel.Contact
                 SqlCommand objCmd = sqlConn.CreateCommand();
 
                 objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_State_SelectForDropDownList";
+                objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
+                objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
@@ -128,8 +129,8 @@ namespace Project5.AdminPanel.Contact
                 SqlCommand objCmd = sqlConn.CreateCommand();
 
                 objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_City_SelectForDropDownList";
-
+                objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
+                objCmd.Parameters.AddWithValue ("@StateID", ddlStateID.SelectedValue);
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
                 if (objSDR.HasRows == true)
@@ -215,6 +216,22 @@ namespace Project5.AdminPanel.Contact
                 {
                     while (objSDR.Read())
                     {
+                        if (!objSDR["CountryID"].Equals(DBNull.Value))
+                        {
+                            ddlCountryID.SelectedValue = objSDR["CountryID"].ToString().Trim();
+                        }
+                        if (!objSDR["StateID"].Equals(DBNull.Value))
+                        {
+                            ddlStateID.SelectedValue = objSDR["StateID"].ToString().Trim();
+                        }
+                        if (!objSDR["CityID"].Equals(DBNull.Value))
+                        {
+                            ddlCityID.SelectedValue = objSDR["CityID"].ToString().Trim();
+                        }
+                        if (!objSDR["ContactCategoryID"].Equals(DBNull.Value))
+                        {
+                            ddlContactCategoryID.SelectedValue = objSDR["ContactCategoryID"].ToString().Trim();
+                        }
                         if (!objSDR["ContactName"].Equals(DBNull.Value))
                         {
                             txtContactName.Text = objSDR["ContactName"].ToString().Trim();
@@ -255,24 +272,7 @@ namespace Project5.AdminPanel.Contact
                         {
                             txtLinkedinID.Text = objSDR["LinkedINID"].ToString().Trim();
                         }
-
-
-                        if (!objSDR["CountryID"].Equals(DBNull.Value))
-                        {
-                            ddlCountryID.SelectedValue = objSDR["CountryID"].ToString().Trim();
-                        }
-                        if (!objSDR["StateID"].Equals(DBNull.Value))
-                        {
-                            ddlStateID.SelectedValue = objSDR["StateID"].ToString().Trim();
-                        }
-                        if (!objSDR["CityID"].Equals(DBNull.Value))
-                        {
-                            ddlCityID.SelectedValue = objSDR["CityID"].ToString().Trim();
-                        }
-                        if (!objSDR["ContactCategoryID"].Equals(DBNull.Value))
-                        {
-                            ddlContactCategoryID.SelectedValue = objSDR["ContactCategoryID"].ToString().Trim();
-                        }
+                        
                         break;
                     }
                 }
@@ -511,8 +511,17 @@ namespace Project5.AdminPanel.Contact
         {
             Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
+
         #endregion Button : Cancel
 
+        protected void ddlCountryID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillStateDropDownList();
+        }
 
+        protected void ddlStateID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCityDropDownList();
+        }
     }
 }

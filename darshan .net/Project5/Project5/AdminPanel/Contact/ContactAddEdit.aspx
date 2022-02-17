@@ -19,7 +19,7 @@
                     Country :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlCountryID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCountryID" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlCountryID_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                     State :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlStateID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlStateID" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlStateID_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
                     BirthDate :
                 </div>
                 <div class="col-md-8">
-                    <asp:TextBox ID="txtBirthDate" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtBirthDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                 </div>
             </div>
 
