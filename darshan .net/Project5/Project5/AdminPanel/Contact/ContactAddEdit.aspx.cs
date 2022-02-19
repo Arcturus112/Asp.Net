@@ -29,7 +29,8 @@ namespace Project5.AdminPanel.Contact
                 {
                     lblMassage.Text = "Edit Mode | ContactID = " + Request.QueryString["ContactID"].ToString();
                     FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
-
+                    FillStateDropDownList();
+                    FillCityDropDownList();
                 }
                 else
                 {
@@ -41,13 +42,28 @@ namespace Project5.AdminPanel.Contact
         }
         #endregion Load Event
 
+        #region SelectedIndexChanged : Country
+        protected void ddlCountryID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillStateDropDownList();
+        }
+        #endregion SelectedIndexChanged : Country
+
+        #region SelectedIndexChanged : State
+        protected void ddlStateID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillCityDropDownList();
+        }
+        #endregion SelectedIndexChanged : State
+
         #region Fill Country DropDownList
         private void FillCountryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             try
             {
-                sqlConn.Open();
+                if (sqlConn.State != ConnectionState.Open)
+                    sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
 
@@ -381,13 +397,13 @@ namespace Project5.AdminPanel.Contact
                     return;
                 }
 
-                if (ddlStateID.SelectedIndex > 0)
-                {
-                    strStateID = Convert.ToInt32(ddlStateID.SelectedValue);
-                }
                 if (ddlCountryID.SelectedIndex > 0)
                 {
                     strCountryID = Convert.ToInt32(ddlCountryID.SelectedValue);
+                }
+                if (ddlStateID.SelectedIndex > 0)
+                {
+                    strStateID = Convert.ToInt32(ddlStateID.SelectedValue);
                 }
                 if (ddlCityID.SelectedIndex > 0)
                 {
@@ -514,14 +530,5 @@ namespace Project5.AdminPanel.Contact
 
         #endregion Button : Cancel
 
-        protected void ddlCountryID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillStateDropDownList();
-        }
-
-        protected void ddlStateID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillCityDropDownList();
-        }
     }
 }

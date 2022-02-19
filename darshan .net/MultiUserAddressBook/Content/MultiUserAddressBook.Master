@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MultiUserAddressBook.master.cs" Inherits="MultiUserAddressBook.Content.MultiUserAddressBook" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Css/bootstrap.min.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div>
+        <div class="container">
+            <div class="row" style="font-family:Bahnschrift; background-color:#dedcdc">
+                <div class="col-md-12 text-center">
+                    <h1>Multi User Address Book</h1>
+                </div>  
+                <div class="col-md-12">
+                     <asp:HyperLink runat="server" ID="hlCountry" Text="Country" NavigateUrl="~/AdminPanel/Country/CountryList.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlState" Text="State" NavigateUrl="~/AdminPanel/State/StateList.aspx" style="color:black"></asp:HyperLink> &nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlCity" Text="City" NavigateUrl="~/AdminPanel/City/CityList.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlContactCategory" Text="ContactCategory" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlContact" Text="Contact" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp
+                     <asp:HyperLink runat="server" ID="hlCountryAdd" Text="CountryAdd" NavigateUrl="~/AdminPanel/Country/CountryAddEdit.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlStateAdd" Text="StateAdd" NavigateUrl="~/AdminPanel/State/StateAddEdit.aspx" style="color:black"></asp:HyperLink> &nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlCityAdd" Text="CityAdd" NavigateUrl="~/AdminPanel/City/CityAddEdit.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlContactCategoryAdd" Text="ContactCategoryAdd" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryAddEdit.aspx" style="color:black"></asp:HyperLink>&nbsp;&nbsp | &nbsp;&nbsp 
+                     <asp:HyperLink runat="server" ID="hlContactAdd" Text="ContactAdd" NavigateUrl="~/AdminPanel/Contact/ContactAddEdit.aspx" style="color:black"></asp:HyperLink>
+                </div>   
+                                
+            </div><hr />
+            <div class="col-md-12" align="right">
+                        <asp:Label ID="lblmessage" runat="server" EnableViewState="false"></asp:Label>&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp
+                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger  btn-sm"  Text="Logout" OnClick="btnLogout_Click"/>
+             </div>
+            <div class="row">
+                <div class="col-md-12">
+                            <asp:ContentPlaceHolder id="cphMainContent" runat="server">           
+                            </asp:ContentPlaceHolder>
+                </div>      
+            </div>
+            
+            <hr />
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <strong>Sutariya Rushik Kaileshbhai</strong> &nbsp;&nbsp | &nbsp;&nbsp
+                    <strong>190540107202</strong>&nbsp;&nbsp | &nbsp;&nbsp
+                    <a href="#">190540107202@darshan.ac.in</a>
+                </div>      
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
