@@ -34,11 +34,14 @@ namespace Project5.AdminPanel.ContactCategory
         #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            SqlString strContactCategoryName= SqlString.Null;
+            #region Local Variables
+            SqlString strContactCategoryName = SqlString.Null;
 
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            #endregion Local Variables
             try
             {
+                #region Server Side Validation
                 string strErrorMassage = "";
 
                 if (txtContactCategoryName.Text.Trim() == "")
@@ -50,17 +53,19 @@ namespace Project5.AdminPanel.ContactCategory
                     lblMassage.Text = strErrorMassage;
                     return;
                 }
+                #endregion Server Side Validation
 
                 objConn.Open();
                 SqlCommand objCmd = objConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
-                
 
+                #region Gather Information & Command Object
                 if (txtContactCategoryName.Text.Trim() != "")
                 {
                     strContactCategoryName = txtContactCategoryName.Text.Trim();
                     objCmd.Parameters.AddWithValue("@ContactCategoryName", strContactCategoryName);
                 }
+                #endregion Gather Information & Command Object
 
                 if (Request.QueryString["ContactCategoryID"] != null)
                 {

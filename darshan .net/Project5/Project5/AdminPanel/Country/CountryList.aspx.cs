@@ -26,13 +26,17 @@ namespace Project5.AdminPanel.Country
         #region Fill GridView
         private void FillGridView()
         {
+            #region Local Variables
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            #endregion Local Variables
             try
             {
+                #region Set Connection
                 objConn.Open();
                 SqlCommand objCmd = new SqlCommand();
                 objCmd.Connection = objConn;
                 objCmd.CommandType = CommandType.StoredProcedure;
+                #endregion Set Connection
                 objCmd.CommandText = "PR_Country_SelectAll";
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
@@ -55,6 +59,7 @@ namespace Project5.AdminPanel.Country
         #region gvCountry
         protected void gvCountry_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            #region Delete Record
             if (e.CommandName == "DeleteRecord")
             {
                 if (e.CommandArgument.ToString() != "")
@@ -62,19 +67,23 @@ namespace Project5.AdminPanel.Country
                     DeleteCountry(Convert.ToInt32(e.CommandArgument.ToString().Trim()));
                 }
             }
+            #endregion Delete Record
         }
         #endregion gvCountry
 
         #region Delete Country
         private void DeleteCountry(SqlInt32 CountryID)
         {
+            #region Local Variables
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-
+            #endregion Local Variables
             try
             {
+                #region Set Connection
                 objConn.Open();
                 SqlCommand objCmd = objConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
+                #endregion Set Connection
                 objCmd.CommandText = "PR_Country_DeleteByPK";
                 objCmd.Parameters.AddWithValue("@CountryID", CountryID.ToString());
                 objCmd.ExecuteNonQuery();

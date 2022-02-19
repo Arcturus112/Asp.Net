@@ -38,6 +38,7 @@ namespace Project5.AdminPanel.City
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             try
             {
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -46,7 +47,7 @@ namespace Project5.AdminPanel.City
                 objCmd.CommandText = "PR_State_SelectForDropDownList";
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
-
+                #endregion Set Connection & Command Object
                 if (objSDR.HasRows == true)
                 {
                     ddlState.DataSource = objSDR;
@@ -73,56 +74,62 @@ namespace Project5.AdminPanel.City
         #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            #region Local Variables
             SqlInt32 strStateID = SqlInt32.Null;
             SqlString strCityName = SqlString.Null;
             SqlString strSTDCode = SqlString.Null;
             SqlString strPinCode = SqlString.Null;
 
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            #endregion Local Variables
 
             try
             {
+                #region Server Side Validation
                 string strErrorMassage = "";
 
-            if (ddlState.SelectedIndex == 0)
-            {
-                strErrorMassage += "- Select State - <br/>";
-            }
-            if (txtCityName.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter City Name - <br/>";
-            }
-            if (txtSTDCode.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter STD Code - <br/>";
-            }
-            if (txtPinCode.Text.Trim() == "")
-            {
-                strErrorMassage += "- Enter Pin Code - <br/>";
-            }
-            if (strErrorMassage.Trim() != "")
-            {
-                lblMassage.Text = strErrorMassage;
-                return;
-            }
+                if (ddlState.SelectedIndex == 0)
+                {
+                    strErrorMassage += "- Select State - <br/>";
+                }
+                if (txtCityName.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter City Name - <br/>";
+                }
+                if (txtSTDCode.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter STD Code - <br/>";
+                }
+                if (txtPinCode.Text.Trim() == "")
+                {
+                    strErrorMassage += "- Enter Pin Code - <br/>";
+                }
+                if (strErrorMassage.Trim() != "")
+                {
+                    lblMassage.Text = strErrorMassage;
+                    return;
+                }
+                #endregion Server Side Validation
 
-            if (ddlState.SelectedIndex > 0)
-            {
-                strStateID = Convert.ToInt32(ddlState.SelectedValue);
-            }
-            if (txtCityName.Text.Trim() != "")
-            {
-                strCityName = txtCityName.Text.Trim();
-            }
-            if (txtSTDCode.Text.Trim() != "")
-            {
-                strSTDCode = txtSTDCode.Text.Trim();
-            }
-            if (txtPinCode.Text.Trim() != "")
-            {
-                strPinCode = txtPinCode.Text.Trim();
-            }
-
+                #region Gather Information
+                if (ddlState.SelectedIndex > 0)
+                {
+                    strStateID = Convert.ToInt32(ddlState.SelectedValue);
+                }
+                if (txtCityName.Text.Trim() != "")
+                {
+                    strCityName = txtCityName.Text.Trim();
+                }
+                if (txtSTDCode.Text.Trim() != "")
+                {
+                    strSTDCode = txtSTDCode.Text.Trim();
+                }
+                if (txtPinCode.Text.Trim() != "")
+                {
+                    strPinCode = txtPinCode.Text.Trim();
+                }
+                #endregion Gather Information
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -133,6 +140,7 @@ namespace Project5.AdminPanel.City
                 objCmd.Parameters.AddWithValue("@CityName", strCityName);
                 objCmd.Parameters.AddWithValue("@STDCode", strSTDCode);
                 objCmd.Parameters.AddWithValue("@PinCode", strPinCode);
+                #endregion Set Connection & Command Object
 
                 if (Request.QueryString["CityID"] != null)
                 {

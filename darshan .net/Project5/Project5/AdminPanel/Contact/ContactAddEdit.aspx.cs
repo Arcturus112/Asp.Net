@@ -63,6 +63,7 @@ namespace Project5.AdminPanel.Contact
             
             try
             {
+                #region Set Connection & Command Object
                 if (sqlConn.State != ConnectionState.Open)
                     sqlConn.Open();
 
@@ -72,7 +73,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.CommandText = "PR_Country_SelectForDropDownList";
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
-
+                #endregion Set Connection & Command Object
                 if (objSDR.HasRows == true)
                 {
                     ddlCountryID.DataSource = objSDR;
@@ -105,6 +106,7 @@ namespace Project5.AdminPanel.Contact
             
             try
             {
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -114,7 +116,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
-
+                #endregion Set Connection & Command Object
                 ddlStateID.Enabled = false;
                 ddlCityID.Enabled = false;
                 ddlStateID.Items.Clear();
@@ -151,6 +153,7 @@ namespace Project5.AdminPanel.Contact
             
             try
             {
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -161,7 +164,7 @@ namespace Project5.AdminPanel.Contact
                 SqlDataReader objSDR = objCmd.ExecuteReader();
                 ddlCityID.Enabled = true;
                 ddlCityID.Items.Clear();
-
+                #endregion Set Connection & Command Object
                 if (objSDR.HasRows == true)
                 {
                     ddlCityID.DataSource = objSDR;
@@ -191,6 +194,7 @@ namespace Project5.AdminPanel.Contact
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             try
             {
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -199,7 +203,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.CommandText = "PR_ContactCategory_SelectForDropDownList";
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
-
+                #endregion Set Connection & Command Object
                 if (objSDR.HasRows == true)
                 {
                     ddlContactCategoryID.DataSource = objSDR;
@@ -326,6 +330,7 @@ namespace Project5.AdminPanel.Contact
         #region Button : Save
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            #region Local Variables
             SqlInt32 strCountryID = SqlInt32.Null;
             SqlInt32 strStateID = SqlInt32.Null;
             SqlInt32 strCityID = SqlInt32.Null;
@@ -340,12 +345,12 @@ namespace Project5.AdminPanel.Contact
             SqlString strBloodGroup = SqlString.Null;
             SqlString strFacebookID = SqlString.Null;
             SqlString strLinkedINID = SqlString.Null;
-
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-
+            #endregion Local Variables
 
             try
             {
+                #region Server Side Validation
                 string strErrorMassage = "";
 
                 if (ddlCountryID.SelectedIndex == 0)
@@ -409,7 +414,9 @@ namespace Project5.AdminPanel.Contact
                     lblMassage.Text = strErrorMassage;
                     return;
                 }
+                #endregion Server Side Validation
 
+                #region Gather Information
                 if (ddlCountryID.SelectedIndex > 0)
                 {
                     strCountryID = Convert.ToInt32(ddlCountryID.SelectedValue);
@@ -466,7 +473,9 @@ namespace Project5.AdminPanel.Contact
                 {
                     strLinkedINID = txtLinkedinID.Text.Trim();
                 }
+                #endregion Gather Information
 
+                #region Set Connection & Command Object
                 sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
@@ -487,6 +496,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.Parameters.AddWithValue("@BloodGroup", strBloodGroup);
                 objCmd.Parameters.AddWithValue("@FacebookID", strFacebookID);
                 objCmd.Parameters.AddWithValue("@LinkedINID", strLinkedINID);
+                #endregion Set Connection & Command Object
 
                 if (Request.QueryString["ContactID"] != null)
                 {

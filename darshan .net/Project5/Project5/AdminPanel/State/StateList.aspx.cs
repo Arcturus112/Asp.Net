@@ -25,13 +25,17 @@ namespace Project5.AdminPanel.State
         #region Fill Grid View
         private void FillGridView()
         {
+            #region Local Variables
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            #endregion Local Variables
             try
             {
+                #region Set Connection
                 objConn.Open();
                 SqlCommand objCmd = new SqlCommand();
                 objCmd.Connection = objConn;
                 objCmd.CommandType = CommandType.StoredProcedure;
+                #endregion Set Connection
                 objCmd.CommandText = "PR_State_SelectAll";
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
@@ -57,7 +61,8 @@ namespace Project5.AdminPanel.State
         #region gvState
         protected void gvState_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if(e.CommandName == "DeleteRecord")
+            #region Delete Record
+            if (e.CommandName == "DeleteRecord")
             {
                 if (e.CommandArgument.ToString() != "")
                 {
@@ -65,19 +70,23 @@ namespace Project5.AdminPanel.State
                     lblMassage.Text = "Record Deleted";
                 }
             }
+            #endregion Delete Record
         }
         #endregion gvState
 
         #region Delete State
         private void DeleteState(SqlInt32 StateID)
         {
+            #region Local Variables
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-
+            #endregion Local Variables
             try
             {
+                #region Set Connection
                 objConn.Open();
                 SqlCommand objCmd = objConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
+                #endregion Set Connection
                 objCmd.CommandText = "PR_State_DeleteByPK";
                 objCmd.Parameters.AddWithValue("@StateID", StateID.ToString());
                 objCmd.ExecuteNonQuery();
