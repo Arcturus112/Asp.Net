@@ -24,22 +24,13 @@ namespace MultiUserAddressBook.Content
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
 
         /// <summary>
-        /// form1 control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// hlCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCountry;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 
         /// <summary>
         /// hlState control.
@@ -60,13 +51,13 @@ namespace MultiUserAddressBook.Content
         protected global::System.Web.UI.WebControls.HyperLink hlCity;
 
         /// <summary>
-        /// hlContactCategory control.
+        /// hlContacyCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlContactCategory;
+        protected global::System.Web.UI.WebControls.HyperLink hlContacyCategory;
 
         /// <summary>
         /// hlContact control.
@@ -76,51 +67,6 @@ namespace MultiUserAddressBook.Content
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hlContact;
-
-        /// <summary>
-        /// hlCountryAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCountryAdd;
-
-        /// <summary>
-        /// hlStateAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlStateAdd;
-
-        /// <summary>
-        /// hlCityAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlCityAdd;
-
-        /// <summary>
-        /// hlContactCategoryAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlContactCategoryAdd;
-
-        /// <summary>
-        /// hlContactAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlContactAdd;
 
         /// <summary>
         /// lblmessage control.
@@ -141,12 +87,12 @@ namespace MultiUserAddressBook.Content
         protected global::System.Web.UI.WebControls.Button btnLogout;
 
         /// <summary>
-        /// cphMainContent control.
+        /// cphContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphMainContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphContent;
     }
 }
