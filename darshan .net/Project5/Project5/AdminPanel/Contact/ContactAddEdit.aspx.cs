@@ -60,6 +60,39 @@ namespace Project5.AdminPanel.Contact
         private void FillCountryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            //try
+            //{
+            //    if (sqlConn.State != ConnectionState.Open)
+            //        sqlConn.Open();
+
+            //    SqlCommand objCmd = sqlConn.CreateCommand();
+
+            //    objCmd.CommandType = CommandType.StoredProcedure;
+            //    objCmd.CommandText = "PR_Country_SelectForDropDownList";
+
+            //    SqlDataReader objSDR = objCmd.ExecuteReader();
+
+            //    if (objSDR.HasRows == true)
+            //    {
+            //        ddlCountryID.DataSource = objSDR;
+            //        ddlCountryID.DataValueField = "CountryID";
+            //        ddlCountryID.DataTextField = "CountryName";
+            //        ddlCountryID.DataBind();
+            //    }
+
+            //    ddlCountryID.Items.Insert(0, new ListItem("Select Country", "-1"));
+
+            //    sqlConn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMassage.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    sqlConn.Close();
+            //}
+
             try
             {
                 if (sqlConn.State != ConnectionState.Open)
@@ -77,6 +110,8 @@ namespace Project5.AdminPanel.Contact
                     ddlCountryID.DataSource = objSDR;
                     ddlCountryID.DataValueField = "CountryID";
                     ddlCountryID.DataTextField = "CountryName";
+                    ddlStateID.Enabled = false;
+                    ddlCityID.Enabled = false;
                     ddlCountryID.DataBind();
                 }
 
@@ -99,6 +134,39 @@ namespace Project5.AdminPanel.Contact
         private void FillStateDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            //try
+            //{
+            //    sqlConn.Open();
+
+            //    SqlCommand objCmd = sqlConn.CreateCommand();
+
+            //    objCmd.CommandType = CommandType.StoredProcedure;
+            //    objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
+            //    objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
+
+            //    SqlDataReader objSDR = objCmd.ExecuteReader();
+
+            //    if (objSDR.HasRows == true)
+            //    {
+            //        ddlStateID.DataSource = objSDR;
+            //        ddlStateID.DataValueField = "StateID";
+            //        ddlStateID.DataTextField = "StateName";
+            //        ddlStateID.DataBind();
+            //    }
+
+            //    ddlStateID.Items.Insert(0, new ListItem("Select State", "-1"));
+
+            //    sqlConn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMassage.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    sqlConn.Close();
+            //}
+
             try
             {
                 sqlConn.Open();
@@ -111,9 +179,15 @@ namespace Project5.AdminPanel.Contact
 
                 SqlDataReader objSDR = objCmd.ExecuteReader();
 
+                ddlStateID.Enabled = false;
+                ddlCityID.Enabled = false;
+                ddlStateID.Items.Clear();
+                ddlCityID.Items.Clear();
+
                 if (objSDR.HasRows == true)
                 {
                     ddlStateID.DataSource = objSDR;
+                    ddlStateID.Enabled = true;
                     ddlStateID.DataValueField = "StateID";
                     ddlStateID.DataTextField = "StateName";
                     ddlStateID.DataBind();
@@ -138,6 +212,38 @@ namespace Project5.AdminPanel.Contact
         private void FillCityDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            //try
+            //{
+            //    sqlConn.Open();
+
+            //    SqlCommand objCmd = sqlConn.CreateCommand();
+
+            //    objCmd.CommandType = CommandType.StoredProcedure;
+            //    objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
+            //    objCmd.Parameters.AddWithValue ("@StateID", ddlStateID.SelectedValue);
+            //    SqlDataReader objSDR = objCmd.ExecuteReader();
+
+            //    if (objSDR.HasRows == true)
+            //    {
+            //        ddlCityID.DataSource = objSDR;
+            //        ddlCityID.DataValueField = "CityID";
+            //        ddlCityID.DataTextField = "CityName";
+            //        ddlCityID.DataBind();
+            //    }
+
+            //    ddlCityID.Items.Insert(0, new ListItem("Select City", "-1"));
+
+            //    sqlConn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMassage.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    sqlConn.Close();
+            //}
+
             try
             {
                 sqlConn.Open();
@@ -146,8 +252,10 @@ namespace Project5.AdminPanel.Contact
 
                 objCmd.CommandType = CommandType.StoredProcedure;
                 objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
-                objCmd.Parameters.AddWithValue ("@StateID", ddlStateID.SelectedValue);
+                objCmd.Parameters.AddWithValue("@StateID", ddlStateID.SelectedValue);
                 SqlDataReader objSDR = objCmd.ExecuteReader();
+                ddlCityID.Enabled = true;
+                ddlCityID.Items.Clear();
 
                 if (objSDR.HasRows == true)
                 {
