@@ -76,6 +76,7 @@
     <Content Include="Content\Images\istockphoto-1080273780-612x612.jpg" />
     <Content Include="Content\Images\The resource cannot be found..html" />
     <Content Include="Content\Js\bootstrap.bundle.min.js" />
+    <Content Include="Logiin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="Content\MultiUserAddressBook.Master.designer.cs">
       <DependentUpon>MultiUserAddressBook.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Logiin.aspx.cs">
+      <DependentUpon>Logiin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logiin.aspx.designer.cs">
+      <DependentUpon>Logiin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,7 +107,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdminPanel\" />
+    <Folder Include="AdminPanel\City\" />
+    <Folder Include="AdminPanel\ContactCategory\" />
+    <Folder Include="AdminPanel\Contact\" />
+    <Folder Include="AdminPanel\Country\" />
+    <Folder Include="AdminPanel\State\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

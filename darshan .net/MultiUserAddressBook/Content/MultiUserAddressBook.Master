@@ -12,49 +12,51 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Multi User Address Book</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Multi User Address Book</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-link" NavigateUrl="#">Country</asp:HyperLink>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:HyperLink ID="hlState" runat="server" CssClass="nav-link" NavigateUrl=#>State</asp:HyperLink>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:HyperLink ID="hlCity" runat="server" CssClass="nav-link" NavigateUrl=#>City</asp:HyperLink>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:HyperLink ID="hlContacyCategory" runat="server" CssClass="nav-link" NavigateUrl=#>Contact Category</asp:HyperLink>
-                    </li>
-                    <li class="nav-item active">
-                        <asp:HyperLink ID="hlContact" runat="server" CssClass="nav-link" NavigateUrl=#>Contact</asp:HyperLink>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <asp:Label ID="lblmessage" runat="server" EnableViewState="false" CssClass="m-3"></asp:Label>
-                    <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger  btn-sm" Text="Logout"/>
-                </form>
-            </div>
-        </nav>
-    </header>
-    <div>
-        <div class="container">
-            <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
-        </div>
-    </div>
-    <footer class="navbar-light bg-light p-3 fixed-bottom u-footer">
-        <div class="container">
-            <div class="row justify-content-center">
-                Bansil H. Sheladiya | 190540107191 | 190540107191@darshan.ac.in
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-link" NavigateUrl="#">Country</asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="hlState" runat="server" CssClass="nav-link" NavigateUrl="#">State</asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="hlCity" runat="server" CssClass="nav-link" NavigateUrl="#">City</asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="hlContacyCategory" runat="server" CssClass="nav-link" NavigateUrl="#">Contact Category</asp:HyperLink>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:HyperLink ID="hlContact" runat="server" CssClass="nav-link" NavigateUrl="#">Contact</asp:HyperLink>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <asp:Label ID="lblmessage" runat="server" EnableViewState="false" CssClass="m-3"></asp:Label>
+                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger  btn-sm" Text="Logout" />
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
             </div>
         </div>
-    </footer>
+        <footer class="navbar-light bg-light p-3 fixed-bottom u-footer">
+            <div class="container">
+                <div class="row justify-content-center">
+                    Bansil H. Sheladiya | 190540107191 | 190540107191@darshan.ac.in
+                </div>
+            </div>
+        </footer>
+    </form>
 </body>
 </html>
