@@ -30,7 +30,7 @@
     </div>
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center m-5">
-            <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark" OnClick="btnSave_Click" />
+            <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark m-2" OnClick="btnSave_Click" />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-danger m-2" OnClick="btnCancel_Click"/>
         </div>
     </div>
