@@ -22,8 +22,8 @@ namespace Project5.AdminPanel.Contact
             {
                 FillCountryDropDownList();
                 FillContactCategoryDropDownList();
-                
-                
+
+
 
                 if (Request.QueryString["ContactID"] != null)
                 {
@@ -60,7 +60,7 @@ namespace Project5.AdminPanel.Contact
         private void FillCountryDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            
+
             try
             {
                 #region Set Connection & Command Object
@@ -103,7 +103,7 @@ namespace Project5.AdminPanel.Contact
         private void FillStateDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            
+
             try
             {
                 #region Set Connection & Command Object
@@ -150,7 +150,7 @@ namespace Project5.AdminPanel.Contact
         private void FillCityDropDownList()
         {
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
-            
+
             try
             {
                 #region Set Connection & Command Object
@@ -279,7 +279,9 @@ namespace Project5.AdminPanel.Contact
                         }
                         if (!objSDR["BirthDate"].Equals(DBNull.Value))
                         {
-                            txtBirthDate.Text = objSDR["BirthDate"].ToString().Trim();
+                            txtBirthDate.TextMode = TextBoxMode.SingleLine;
+                            //txtBirthDate.Text = objSDR["BirthDate"].ToString().Trim();
+                            txtBirthDate.Text = ((DateTime)objSDR["BirthDate"]).ToString("dd-MM-yyyy");
                         }
                         if (!objSDR["Email"].Equals(DBNull.Value))
                         {
@@ -305,7 +307,7 @@ namespace Project5.AdminPanel.Contact
                         {
                             txtLinkedinID.Text = objSDR["LinkedINID"].ToString().Trim();
                         }
-                        
+
                         break;
                     }
                 }
@@ -447,7 +449,8 @@ namespace Project5.AdminPanel.Contact
                 }
                 if (txtBirthDate.Text.Trim() != "")
                 {
-                    strBirthDate = txtBirthDate.Text.Trim();
+                    //strBirthDate = txtBirthDate.Text.Trim();
+                    strBirthDate = Convert.ToDateTime(txtBirthDate.Text.Trim()).ToString("MM-dd-yyyy");
                 }
                 if (txtEmail.Text.Trim() != "")
                 {
@@ -480,7 +483,8 @@ namespace Project5.AdminPanel.Contact
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
-                
+
+
 
                 objCmd.Parameters.AddWithValue("@CountryID", strCountryID);
                 objCmd.Parameters.AddWithValue("@StateID", strStateID);
@@ -551,7 +555,7 @@ namespace Project5.AdminPanel.Contact
             Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
 
-        #endregion Button : Cancel
 
+        #endregion Button : Cancel
     }
 }
