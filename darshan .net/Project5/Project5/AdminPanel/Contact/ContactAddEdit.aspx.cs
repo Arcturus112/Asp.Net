@@ -279,9 +279,10 @@ namespace Project5.AdminPanel.Contact
                         }
                         if (!objSDR["BirthDate"].Equals(DBNull.Value))
                         {
-                            txtBirthDate.TextMode = TextBoxMode.SingleLine;
+                            //txtBirthDate.TextMode = TextBoxMode.SingleLine;
                             //txtBirthDate.Text = objSDR["BirthDate"].ToString().Trim();
-                            txtBirthDate.Text = ((DateTime)objSDR["BirthDate"]).ToString("dd-MM-yyyy");
+                            //txtBirthDate.Text = ((DateTime)objSDR["BirthDate"]).ToString("dd-MM-yyyy");
+                            txtBirthDate.Text = Convert.ToDateTime(objSDR["BirthDate"].ToString().Trim()).ToString("yyyy-MM-dd");
                         }
                         if (!objSDR["Email"].Equals(DBNull.Value))
                         {
@@ -449,8 +450,9 @@ namespace Project5.AdminPanel.Contact
                 }
                 if (txtBirthDate.Text.Trim() != "")
                 {
-                    //strBirthDate = txtBirthDate.Text.Trim();
-                    strBirthDate = Convert.ToDateTime(txtBirthDate.Text.Trim()).ToString("MM-dd-yyyy");
+                    strBirthDate = txtBirthDate.Text.Trim();
+                    //strBirthDate = Convert.ToDateTime(txtBirthDate.Text.Trim()).ToString("MM-dd-yyyy");
+
                 }
                 if (txtEmail.Text.Trim() != "")
                 {
