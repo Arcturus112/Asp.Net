@@ -3,11 +3,6 @@
     box-shadow: 12px 12px 22px;
 }
 
-.login img{
-    border-top-left-radius : 30px;
-    border-bottom-left-radius : 30px;
-}
-
 .login h1 {
     font-size: 4rem;
     font-weight: 700;

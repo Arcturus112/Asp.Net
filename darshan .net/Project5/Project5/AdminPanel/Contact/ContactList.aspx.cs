@@ -32,6 +32,7 @@ namespace Project5.AdminPanel.Contact
             try
             {
                 #region Set Connection
+
                 objConn.Open();
                 SqlCommand objCmd = new SqlCommand();
                 objCmd.Connection = objConn;
@@ -39,7 +40,6 @@ namespace Project5.AdminPanel.Contact
                 #endregion Set Connection
                 objCmd.CommandText = "PR_Contact_SelectAll";
                 SqlDataReader objSDR = objCmd.ExecuteReader();
-
                 gvContact.DataSource = objSDR;
                 gvContact.DataBind();
 

@@ -40,7 +40,7 @@
                     </ul>
                     <div class="d-flex">
                         <asp:Label ID="lblmessage" runat="server" EnableViewState="false" CssClass="m-3"></asp:Label>
-                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger  btn-sm" Text="Logout" />
+                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-danger  btn-sm" Text="Logout" OnClick="btnLogout_Click" />
                     </div>
                 </div>
             </nav>
