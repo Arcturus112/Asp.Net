@@ -194,13 +194,10 @@ namespace MultiUserAddressBook.AdminPanel.Login
                     objCmd.Parameters.AddWithValue("@UserName", strUsername);
                     exists = (int)objCmd.ExecuteScalar() > 0;
                 }
-
-                // if exists, show a message error
                 if (exists)
                     lblMassage.Text = "This username has been using by another user.";
                 else
                 {
-                    // does not exists, so, persist the user
                     using (SqlCommand objCmd = objConn.CreateCommand())
                     {
                         objCmd.CommandType = CommandType.StoredProcedure;
