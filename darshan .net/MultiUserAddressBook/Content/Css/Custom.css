@@ -30,11 +30,12 @@
     background-color : rgb(190,47,47);
     color : white;
 }
-
+    
 .btn1:hover{
     background-color: brown;
     transition:0.5s;
 }
+
 
 .center-login {
     width: 100%;
