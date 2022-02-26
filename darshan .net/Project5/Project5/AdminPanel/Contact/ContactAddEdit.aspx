@@ -147,6 +147,7 @@
                 </div>
                 <div class="col-md-8">
                     <asp:FileUpload ID="fuFile" runat="server" />
+                    <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Image Files Allowed" ForeColor="#E8442D" ValidationExpression="[a-zA-Z0_9].*\b(.jpeg|.JPEG|.jpg|.JPG|.jpe|.JPE|.png|.PNG|.mpp|.MPP|.gif|.GIF)\b"></asp:RegularExpressionValidator>--%>
                 </div>
             </div>
 

@@ -21,7 +21,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactID") %>'><i class="fa-solid fa-trash fa-xl"></i></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Edit">

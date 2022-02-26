@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -66,7 +67,9 @@ namespace Project5.AdminPanel.Contact
                 {
                     DeleteContact(Convert.ToInt32(e.CommandArgument.ToString().Trim()));
                 }
+                
             }
+
             #endregion Delete Record
         }
         #endregion gvContact

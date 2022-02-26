@@ -17,7 +17,7 @@ namespace Project5.AdminPanel.Contact
         #region Load Event
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
             if (!Page.IsPostBack)
             {
                 FillCountryDropDownList();
@@ -36,7 +36,6 @@ namespace Project5.AdminPanel.Contact
                 {
                     lblMassage.Text = "Add Mode";
                 }
-
 
             }
         }
@@ -484,7 +483,7 @@ namespace Project5.AdminPanel.Contact
                 }
                 if (fuFile.HasFile)
                 {
-                    String FilePath = "../../UserContent/";
+                    string FilePath = "../../UserContent/";
                     string Path = Server.MapPath(FilePath);
                     ContactPhotoPath = FilePath + fuFile.FileName.ToString().Trim();
 
