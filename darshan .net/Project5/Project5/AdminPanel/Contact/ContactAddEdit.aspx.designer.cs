@@ -150,6 +150,15 @@ namespace Project5.AdminPanel.Contact
         protected global::System.Web.UI.WebControls.TextBox txtLinkedinID;
 
         /// <summary>
+        /// fuFile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuFile;
+
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

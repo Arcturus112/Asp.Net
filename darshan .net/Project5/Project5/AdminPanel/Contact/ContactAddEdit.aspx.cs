@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
-
+using System.IO;
 
 namespace Project5.AdminPanel.Contact
 {
@@ -308,7 +308,6 @@ namespace Project5.AdminPanel.Contact
                         {
                             txtLinkedinID.Text = objSDR["LinkedINID"].ToString().Trim();
                         }
-
                         break;
                     }
                 }
@@ -348,6 +347,7 @@ namespace Project5.AdminPanel.Contact
             SqlString strBloodGroup = SqlString.Null;
             SqlString strFacebookID = SqlString.Null;
             SqlString strLinkedINID = SqlString.Null;
+            string ContactPhotoPath = "";
             SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             #endregion Local Variables
 
@@ -411,6 +411,10 @@ namespace Project5.AdminPanel.Contact
                 if (txtLinkedinID.Text.Trim() == "")
                 {
                     strErrorMassage += "- Enter LinkedIN ID - <br/>";
+                }
+                if (!fuFile.HasFile)
+                {
+                    strErrorMassage += "- Upload File - <br/>";
                 }
                 if (strErrorMassage.Trim() != "")
                 {
@@ -478,10 +482,23 @@ namespace Project5.AdminPanel.Contact
                 {
                     strLinkedINID = txtLinkedinID.Text.Trim();
                 }
-                #endregion Gather Information
+                if (fuFile.HasFile)
+                {
+                    String FilePath = "../../UserContent/";
+                    string Path = Server.MapPath(FilePath);
+                    ContactPhotoPath = FilePath + fuFile.FileName.ToString().Trim();
 
-                #region Set Connection & Command Object
-                sqlConn.Open();
+                    if (!Directory.Exists(Path))
+                    {
+                        Directory.CreateDirectory(Path);
+                    }
+
+                    fuFile.SaveAs(Server.MapPath(ContactPhotoPath));
+                }
+                    #endregion Gather Information
+
+                    #region Set Connection & Command Object
+                    sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
@@ -502,6 +519,7 @@ namespace Project5.AdminPanel.Contact
                 objCmd.Parameters.AddWithValue("@BloodGroup", strBloodGroup);
                 objCmd.Parameters.AddWithValue("@FacebookID", strFacebookID);
                 objCmd.Parameters.AddWithValue("@LinkedINID", strLinkedINID);
+                objCmd.Parameters.AddWithValue("@ContactPhotoPath", ContactPhotoPath); 
                 #endregion Set Connection & Command Object
 
                 if (Request.QueryString["ContactID"] != null)

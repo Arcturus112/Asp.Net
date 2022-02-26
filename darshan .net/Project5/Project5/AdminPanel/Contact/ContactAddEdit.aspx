@@ -142,6 +142,15 @@
             </div>
 
             <div class="row m-3">
+                <div class="col-md-4">
+                    Upload Photo :
+                </div>
+                <div class="col-md-8">
+                    <asp:FileUpload ID="fuFile" runat="server" />
+                </div>
+            </div>
+
+            <div class="row m-3">
                 <div class="col-md-12 m-5 d-flex justify-content-center">
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark m-2" OnClick="btnSave_Click" />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-danger m-2" OnClick="btnCancel_Click1" />

@@ -101,5 +101,6 @@ namespace Project5.AdminPanel.Contact
             }
         }
         #endregion Delete Contact
+
     }
 }

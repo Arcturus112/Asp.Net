@@ -73,6 +73,7 @@
     <Content Include="AdminPanel\ContactCategory\ContactCategoryList.aspx" />
     <Content Include="AdminPanel\Contact\ContactAddEdit.aspx" />
     <Content Include="AdminPanel\Contact\ContactList.aspx" />
+    <Content Include="AdminPanel\Contact\ErrorStatus.html" />
     <Content Include="AdminPanel\Country\CountryAddEdit.aspx" />
     <Content Include="AdminPanel\Country\CountryList.aspx" />
     <Content Include="AdminPanel\FileUpload\ErrorStatus.html" />
@@ -2012,7 +2013,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UserContent\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
