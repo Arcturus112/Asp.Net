@@ -60,6 +60,25 @@ namespace Project5.AdminPanel.Contact
         #region gvContact
         protected void gvContact_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+
+            string strPath = "";
+            SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            Conn.Open();
+            SqlCommand obj = Conn.CreateCommand();
+            obj.CommandType = CommandType.StoredProcedure;
+            obj.CommandText = "PR_Contact_ContactPhoto";
+            obj.Parameters.AddWithValue("@ContactID", e.CommandArgument.ToString().Trim());
+            SqlDataReader objSDR = obj.ExecuteReader();
+            while(objSDR.Read()){
+                strPath = objSDR["ContactPhotoPath"].ToString().Trim();
+            }
+            FileInfo file = new FileInfo(Server.MapPath(strPath));
+            if (file.Exists)
+            {
+                file.Delete();
+            }
+            Conn.Close();
+
             #region Delete Record
             if (e.CommandName == "DeleteRecord")
             {
@@ -67,9 +86,7 @@ namespace Project5.AdminPanel.Contact
                 {
                     DeleteContact(Convert.ToInt32(e.CommandArgument.ToString().Trim()));
                 }
-                
             }
-
             #endregion Delete Record
         }
         #endregion gvContact
@@ -77,6 +94,7 @@ namespace Project5.AdminPanel.Contact
         #region Delete Contact
         private void DeleteContact(SqlInt32 ContactID)
         {
+       
             #region Local Variables
             SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
             #endregion Local Variables
