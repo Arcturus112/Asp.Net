@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <asp:Label ID="lblMassage" runat="server" EnableViewState="false"></asp:Label>
+            <asp:Label ID="lblMassage" runat="server" EnableViewState="False"></asp:Label>
         </div>
     </div>
     <div class="row">

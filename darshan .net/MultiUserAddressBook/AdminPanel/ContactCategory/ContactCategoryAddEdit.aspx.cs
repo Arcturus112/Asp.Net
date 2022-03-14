@@ -20,6 +20,7 @@ namespace MultiUserAddressBook.AdminPanel.ContactCategory
             {
                 if (Request.QueryString["ContactCategoryID"] != null)
                 {
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["ContactCategoryID"]));
                 }

@@ -20,6 +20,7 @@ namespace MultiUserAddressBook.AdminPanel.Country
             {
                 if (Request.QueryString["CountryID"] != null)
                 {
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["CountryID"]));
                 }

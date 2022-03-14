@@ -23,6 +23,7 @@ namespace MultiUserAddressBook.AdminPanel.City
                 {
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["CityID"]));
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                 }
                 else
                 {

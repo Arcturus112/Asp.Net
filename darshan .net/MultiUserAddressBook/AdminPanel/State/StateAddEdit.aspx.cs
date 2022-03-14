@@ -21,6 +21,7 @@ namespace MultiUserAddressBook.AdminPanel.State
                 FillDropDownList();
                 if (Request.QueryString["StateID"] != null)
                 {
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["StateID"]));
                 }

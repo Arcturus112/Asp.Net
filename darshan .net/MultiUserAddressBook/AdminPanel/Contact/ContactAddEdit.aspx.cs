@@ -26,6 +26,7 @@ namespace MultiUserAddressBook.AdminPanel.Contact
 
                 if (Request.QueryString["ContactID"] != null)
                 {
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode | ContactID = " + Request.QueryString["ContactID"].ToString();
                     FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
                     FillStateDropDownList();

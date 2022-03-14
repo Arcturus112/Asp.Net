@@ -9,7 +9,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <asp:Label ID="lblMassage" runat="server" EnableViewState="false"></asp:Label>
+            <asp:Label ID="lblMassage" runat="server" EnableViewState="False"></asp:Label>
         </div>
     </div>
     <div class="row">
@@ -139,13 +139,16 @@
                     <asp:TextBox ID="txtLinkedinID" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
-
             <div class="row m-3">
-                <div class="col-md-12 m-5 d-flex justify-content-center">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-8 mb-5">
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-dark m-2" OnClick="btnSave_Click" />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click1" />
                 </div>
             </div>
+
         </div>
     </div>
 </asp:Content>
