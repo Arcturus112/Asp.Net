@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Content/MultiUserAddressBook.Master" AutoEventWireup="true" CodeBehind="CountryList.aspx.cs" Inherits="MultiUserAddressBook.AdminPanel.Country.CountryList" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContent" runat="server">
@@ -16,11 +17,11 @@
                 <asp:HyperLink runat="server" ID="hlAddCountry" NavigateUrl="~/AdminPanel/Country/CountryAddEdit.aspx" CssClass="btn btn-dark">Add New Country</asp:HyperLink>
             </div>
             <div>
-                <asp:GridView ID="gvCountry" runat="server" CssClass="table table-hover" OnRowCommand="gvCountry_RowCommand">
+                <asp:GridView ID="gvCountry" runat="server" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvCountry_RowCommand">
                     <Columns>
                         <asp:TemplateField HeaderText="Delete">
                             <ItemTemplate>
-                                <asp:LinkButton runat="server" ID="btnDelete" CssClass="btn btn-danger" CommandName="DeleteRecord" CommandArgument='<%# Eval("CountryID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
+                                <asp:LinkButton runat="server" ID="btnDelete" CssClass="btn btn-danger" CommandName="DeleteRecord" OnClientClick="return confirm('Are you Sure You Want to Delete.');" CommandArgument='<%# Eval("CountryID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Edit">
@@ -28,6 +29,8 @@
                                 <asp:HyperLink ID="hlEdit" runat="server" Target="_blank" CssClass="btn btn-dark" NavigateUrl='<%# "~/AdminPanel/Country/CountryAddEdit.aspx?CountryID=" + Eval("CountryID") %>'><i class="fa-solid fa-pen-to-square"></i></asp:HyperLink>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:BoundField DataField="CountryName" HeaderText="Country Name" />
+                        <asp:BoundField DataField="CountryCode" HeaderText="Country Code" />
                     </Columns>
                 </asp:GridView>
             </div>

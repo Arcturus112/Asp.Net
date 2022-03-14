@@ -134,23 +134,20 @@ namespace MultiUserAddressBook.AdminPanel.Login
 
             #region Server Side Validation
             if (txtUsername.Text == "")
-                strErrorMessage += "-enter UserName <br>";
+                strErrorMessage += "-Enter UserName <br>";
 
             if (txtPassword.Text == "")
-                strErrorMessage += "-enter Password <br>";
+                strErrorMessage += "-Enter Password <br>";
 
             if (txtDisplayName.Text == "")
-                strErrorMessage += "-enter Displayname <br>";
-
-            if (txtEmail.Text == "")
-                strErrorMessage += "-enter Email Address <br>";
+                strErrorMessage += "-Enter Displayname <br>";
 
             if (txtContactno.Text == "")
-                strErrorMessage += "-enter Email Address <br>";
+                strErrorMessage += "-Enter Contact No <br>";
 
             if (strErrorMessage != "")
             {
-                lblMassage.Text = strErrorMessage;
+                lblMassage.Text = "Kindly Solve Following Error(s) <br/>" + strErrorMessage;
                 return;
             }
             #endregion Server Side Validation

@@ -19,7 +19,7 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('Are you Sure You Want to Delete.');" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Edit">
@@ -27,7 +27,6 @@
                             <asp:HyperLink ID="hlEdit" runat="server" Target="_blank" CssClass="btn btn-dark" NavigateUrl='<%# "~/AdminPanel/Contact/ContactAddEdit.aspx?ContactID=" + Eval("ContactID") %>'><i class="fa-solid fa-pen-to-square"></i></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:BoundField DataField="ContactID" HeaderText="ContactID" />
                     <asp:BoundField DataField="CountryName" HeaderText="CountryName"  />
                     <asp:BoundField DataField="StateName" HeaderText="StateName"  />
                     <asp:BoundField DataField="CityName" HeaderText="CityName"  />

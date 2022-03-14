@@ -55,8 +55,8 @@
 
                 </div>
                 <div class="col-md-8">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark" OnClick="btnSave_Click"/>
-                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-danger m-2" OnClick="btnCancel_Click"/>
+                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-dark m-2" OnClick="btnSave_Click"/>
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click"/>
                 </div>
             </div>
         </div>

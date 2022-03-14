@@ -142,8 +142,8 @@
 
             <div class="row m-3">
                 <div class="col-md-12 m-5 d-flex justify-content-center">
-                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn-dark m-2" OnClick="btnSave_Click" />
-                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn-danger m-2" OnClick="btnCancel_Click1" />
+                    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-dark m-2" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click1" />
                 </div>
             </div>
         </div>

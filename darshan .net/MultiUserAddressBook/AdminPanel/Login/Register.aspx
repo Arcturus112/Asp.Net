@@ -18,29 +18,29 @@
 <body>
     <section class="login bg-light">
         <div class="container center-login">
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center" style="background-color:lightgray;">
                 <div class="col-lg-7 text-center py-3">
                     <h1>Register</h1>
-                    <asp:Label ID="lblMassage" runat="server"></asp:Label>
+                    <asp:Label ID="lblMassage" runat="server" ForeColor="Red"></asp:Label>
                     <form runat="server">
                         <div class="form-row py-2 pt-5">
                             <div class="offset-1 col-lg-10">
-                                <asp:TextBox ID="txtUsername" runat="server" CssClass="inp px-3" placeholder="Username"></asp:TextBox>
+                                <asp:TextBox ID="txtUsername" runat="server" CssClass="inp px-3" placeholder="Username*"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <asp:TextBox ID="txtPassword" runat="server" CssClass="inp px-3" placeholder="Password"></asp:TextBox>
+                                <asp:TextBox ID="txtPassword" runat="server" CssClass="inp px-3" placeholder="Password*"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <asp:TextBox ID="txtContactno" runat="server" CssClass="inp px-3" placeholder="Mobile No"></asp:TextBox>
+                                <asp:TextBox ID="txtContactno" runat="server" CssClass="inp px-3" placeholder="Mobile No*"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <asp:TextBox ID="txtDisplayName" runat="server" CssClass="inp px-3" placeholder="DisplayName"></asp:TextBox>
+                                <asp:TextBox ID="txtDisplayName" runat="server" CssClass="inp px-3" placeholder="DisplayName*"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-row py-3">

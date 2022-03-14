@@ -16,11 +16,11 @@
                 <asp:HyperLink runat="server" ID="hlAddContactCategory" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryAddEdit.aspx" CssClass="btn btn-dark">Add New Contact Category</asp:HyperLink>
             </div>
             <div>
-                <asp:GridView ID="gvConCat" runat="server" CssClass="table table-hover" OnRowCommand="gvConCat_RowCommand">
+                <asp:GridView ID="gvConCat" runat="server" CssClass="table table-hover" AutoGenerateColumns="false" OnRowCommand="gvConCat_RowCommand">
                     <Columns>
                         <asp:TemplateField HeaderText="Delete">
                             <ItemTemplate>
-                                <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactCategoryID") %>' ><i class="fa-solid fa-trash"></i></asp:LinkButton>
+                                <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('Are you Sure You Want to Delete.');" CommandName="DeleteRecord" CommandArgument='<%# Eval("ContactCategoryID") %>' ><i class="fa-solid fa-trash"></i></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Edit">
@@ -28,6 +28,7 @@
                                 <asp:HyperLink ID="hlEdit" runat="server" Target="_blank" CssClass="btn btn-dark" NavigateUrl='<%# "~/AdminPanel/ContactCategory/ContactCategoryAddEdit.aspx?ContactCategoryID=" + Eval("ContactCategoryID") %>'><i class="fa-solid fa-pen-to-square"></i></asp:HyperLink>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:BoundField DataField="ContactCategoryName" HeaderText="Contact Category Name" />
                     </Columns>
                 </asp:GridView>
             </div>

@@ -31,11 +31,11 @@ namespace MultiUserAddressBook
 
             if(txtUsername.Text.Trim() == "")
             {
-                strErrorMessage = "- Enter UserName - <br/>";
+                strErrorMessage += "- Enter UserName - <br/>";
             }
             if (txtPassword.Text.Trim() == "")
             {
-                strErrorMessage = "- Enter Password - <br/>";
+                strErrorMessage += "- Enter Password - <br/>";
             }
             if (strErrorMessage != "")
             {

@@ -22,7 +22,7 @@
 
                     <asp:TemplateField HeaderText="Delete">
                         <ItemTemplate>
-                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" CommandName="DeleteRecord" CommandArgument='<%# Eval("StateID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnDelete" Text="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('Are you Sure You Want to Delete.');" CommandName="DeleteRecord" CommandArgument='<%# Eval("StateID") %>'><i class="fa-solid fa-trash"></i></asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
 
@@ -31,10 +31,9 @@
                             <asp:HyperLink ID="hlEdit" runat="server" Target="_blank" CssClass="btn btn-dark" NavigateUrl='<%# "~/AdminPanel/State/StateAddEdit.aspx?StateID=" + Eval("StateID") %>'><i class="fa-solid fa-pen-to-square"></i></asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
-
-                    <asp:BoundField DataField="StateCode" HeaderText="Code" />
                     <asp:BoundField DataField="CountryName" HeaderText="Country" />
                     <asp:BoundField DataField="StateName" HeaderText="State" />
+                    <asp:BoundField DataField="StateCode" HeaderText="Code" />
                 </Columns>
             </asp:GridView>
         </div>
