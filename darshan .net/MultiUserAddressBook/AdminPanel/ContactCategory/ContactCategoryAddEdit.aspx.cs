@@ -20,7 +20,6 @@ namespace MultiUserAddressBook.AdminPanel.ContactCategory
             {
                 if (Request.QueryString["ContactCategoryID"] != null)
                 {
-                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["ContactCategoryID"]));
                 }
@@ -83,6 +82,7 @@ namespace MultiUserAddressBook.AdminPanel.ContactCategory
                     #region Add Record
                     objCmd.CommandText = "PR_ContactCategory_Insert";
                     objCmd.ExecuteNonQuery();
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Data Inserted Successfully";
                     txtContactCategoryName.Text = "";
                     txtContactCategoryName.Focus();

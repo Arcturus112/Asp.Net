@@ -206,6 +206,7 @@ namespace MultiUserAddressBook.AdminPanel.Login
                         objCmd.Parameters.AddWithValue("@Email", strEmail);
 
                         objCmd.ExecuteNonQuery();
+                        lblMassage.ForeColor = System.Drawing.Color.Black;
                         lblMassage.Text = "Successfully Created Account ! Please Login";
 
                         txtEmail.Text = "";

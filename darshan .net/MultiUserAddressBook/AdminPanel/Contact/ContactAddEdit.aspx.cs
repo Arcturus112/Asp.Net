@@ -26,7 +26,6 @@ namespace MultiUserAddressBook.AdminPanel.Contact
 
                 if (Request.QueryString["ContactID"] != null)
                 {
-                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode | ContactID = " + Request.QueryString["ContactID"].ToString();
                     FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
                     FillStateDropDownList();
@@ -385,38 +384,15 @@ namespace MultiUserAddressBook.AdminPanel.Contact
                 {
                     strErrorMassage += "- Enter Contact No - <br/>";
                 }
-                if (txtWhatsAppNo.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter WhatsApp No - <br/>";
-                }
-                if (txtBirthDate.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter BirthDate - <br/>";
-                }
                 if (txtEmail.Text.Trim() == "")
                 {
                     strErrorMassage += "- Enter Email - <br/>";
-                }
-                if (txtAge.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter Age - <br/>";
                 }
                 if (txtAddress.Text.Trim() == "")
                 {
                     strErrorMassage += "- Enter Address - <br/>";
                 }
-                if (txtBloodGroup.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter BloodGroup - <br/>";
-                }
-                if (txtFacebookID.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter Facebook ID - <br/>";
-                }
-                if (txtLinkedinID.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter LinkedIN ID - <br/>";
-                }
+                
                 if (strErrorMassage.Trim() != "")
                 {
                     lblMassage.Text = strErrorMassage;
@@ -539,6 +515,7 @@ namespace MultiUserAddressBook.AdminPanel.Contact
                     txtFacebookID.Text = "";
                     txtLinkedinID.Text = "";
                     ddlCountryID.Focus();
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Data Inserted Successfully";
                     Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
                     #endregion Add Record
@@ -558,12 +535,14 @@ namespace MultiUserAddressBook.AdminPanel.Contact
         #endregion Button : Save
 
         #region Button : Cancel
-        protected void btnCancel_Click1(object sender, EventArgs e)
-        {
-            Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
-        }
+
 
 
         #endregion Button : Cancel
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
+        }
     }
 }

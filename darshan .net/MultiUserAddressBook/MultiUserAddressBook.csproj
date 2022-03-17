@@ -1869,6 +1869,7 @@
     <Content Include="Content\Fontawosome\svgs\solid\z.svg" />
     <Content Include="Content\Js\bootstrap.bundle.min.js" />
     <Content Include="AdminPanel\Login\Login.aspx" />
+    <Content Include="Content\Js\Custom.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

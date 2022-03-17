@@ -21,7 +21,6 @@ namespace MultiUserAddressBook.AdminPanel.State
                 FillDropDownList();
                 if (Request.QueryString["StateID"] != null)
                 {
-                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["StateID"]));
                 }
@@ -55,10 +54,6 @@ namespace MultiUserAddressBook.AdminPanel.State
                 if (txtStateName.Text.Trim() == "")
                 {
                     strErrorMassage += "- Enter State Name - <br/>";
-                }
-                if (txtStateCode.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter State Code - <br/>";
                 }
                 if (strErrorMassage.Trim() != "")
                 {
@@ -109,6 +104,7 @@ namespace MultiUserAddressBook.AdminPanel.State
                     ddlCountryID.SelectedIndex = 0;
                     txtStateCode.Text = "";
                     ddlCountryID.Focus();
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Data Inserted Successfully";
                     #endregion Add Record
                 }

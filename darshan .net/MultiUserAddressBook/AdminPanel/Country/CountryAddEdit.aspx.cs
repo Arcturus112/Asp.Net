@@ -20,7 +20,6 @@ namespace MultiUserAddressBook.AdminPanel.Country
             {
                 if (Request.QueryString["CountryID"] != null)
                 {
-                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["CountryID"]));
                 }
@@ -45,10 +44,6 @@ namespace MultiUserAddressBook.AdminPanel.Country
                 #region Server Side Validation
                 string strErrorMassage = "";
 
-                if (txtCountryCode.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter Country Code - <br/>";
-                }
                 if (txtCountryName.Text.Trim() == "")
                 {
                     strErrorMassage += "- Enter Country Name - <br/>";
@@ -92,6 +87,7 @@ namespace MultiUserAddressBook.AdminPanel.Country
                     #region Add Record
                     objCmd.CommandText = "PR_Country_Insert";
                     objCmd.ExecuteNonQuery();
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Data Inserted Successfully";
                     txtCountryName.Text = "";
                     txtCountryCode.Text = "";
@@ -116,7 +112,7 @@ namespace MultiUserAddressBook.AdminPanel.Country
         #region Button : Cancel
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/AdminPanel/Country/CountryList.aspx", true);
+            Response.Redirect("~/AdminPanel/Country/CountryList.aspx", true );
         }
         #endregion Button : Cancel
 

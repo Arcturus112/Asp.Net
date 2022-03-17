@@ -42,6 +42,33 @@ namespace MultiUserAddressBook.AdminPanel.Login
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
+        /// revPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPass;
+
+        /// <summary>
+        /// txtConPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtConPass;
+
+        /// <summary>
+        /// cvConPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvConPass;
+
+        /// <summary>
         /// txtContactno control.
         /// </summary>
         /// <remarks>
@@ -49,6 +76,15 @@ namespace MultiUserAddressBook.AdminPanel.Login
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContactno;
+
+        /// <summary>
+        /// revContact control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revContact;
 
         /// <summary>
         /// txtDisplayName control.
@@ -67,6 +103,15 @@ namespace MultiUserAddressBook.AdminPanel.Login
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
         /// btnSignUP control.

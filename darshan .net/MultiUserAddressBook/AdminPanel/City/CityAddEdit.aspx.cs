@@ -23,7 +23,6 @@ namespace MultiUserAddressBook.AdminPanel.City
                 {
                     lblMassage.Text = "Edit Mode";
                     FillControls(Convert.ToInt32(Request.QueryString["CityID"]));
-                    lblMassage.ForeColor = System.Drawing.Color.Green;
                 }
                 else
                 {
@@ -97,14 +96,6 @@ namespace MultiUserAddressBook.AdminPanel.City
                 {
                     strErrorMassage += "- Enter City Name - <br/>";
                 }
-                if (txtSTDCode.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter STD Code - <br/>";
-                }
-                if (txtPinCode.Text.Trim() == "")
-                {
-                    strErrorMassage += "- Enter Pin Code - <br/>";
-                }
                 if (strErrorMassage.Trim() != "")
                 {
                     lblMassage.Text = strErrorMassage;
@@ -163,6 +154,7 @@ namespace MultiUserAddressBook.AdminPanel.City
                     txtSTDCode.Text = "";
                     txtPinCode.Text = "";
                     ddlState.Focus();
+                    lblMassage.ForeColor = System.Drawing.Color.Green;
                     lblMassage.Text = "Data Inserted Successfully";
                     #endregion Add Record
                 }

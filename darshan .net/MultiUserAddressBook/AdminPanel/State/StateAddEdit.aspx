@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <div class="row m-3">
                 <div class="col-md-4">
-                    Country :
+                    Country* :
                 </div>
                 <div class="col-md-8">
                     <asp:DropDownList ID="ddlCountryID" runat="server" CssClass="form-control"></asp:DropDownList>
@@ -25,10 +25,11 @@
 
             <div class="row m-3">
                 <div class="col-md-4">
-                    State Name :
+                    State Name* :
                 </div>
                 <div class="col-md-8">
                     <asp:TextBox ID="txtStateName" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvState" runat="server" ControlToValidate="txtStateName" Display="Dynamic" ErrorMessage="Enter State Name" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
             </div>
 

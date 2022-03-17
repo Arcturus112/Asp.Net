@@ -14,10 +14,13 @@
     </div>
     <div class="row m-2">
         <div class="col-md-4">
-            Country Name :
+            Country Name* :
         </div>
         <div class="col-md-8">
             <asp:TextBox ID="txtCountryName" runat="server" CssClass="form-control"></asp:TextBox>
+        </div>
+        <div class="col-md-8">
+            <asp:RequiredFieldValidator ID="rfvCountryName" runat="server" ErrorMessage="Enter Country Name" ControlToValidate="txtCountryName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="row m-2">

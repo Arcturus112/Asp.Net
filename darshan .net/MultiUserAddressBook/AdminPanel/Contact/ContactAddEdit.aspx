@@ -65,6 +65,7 @@
                 </div>
                 <div class="col-md-8">
                     <asp:TextBox ID="txtContactNo" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revContact" runat="server" ControlToValidate="txtContactNo" Display="Dynamic" ErrorMessage="Enter Contact Number" ForeColor="Red" ValidationExpression="^[789]\d{9}$"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -92,6 +93,7 @@
                 </div>
                 <div class="col-md-8">
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" Display="Dynamic" ErrorMessage="Enter Valid Email Address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -145,7 +147,7 @@
                 </div>
                 <div class="col-md-8 mb-5">
                     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-dark m-2" OnClick="btnSave_Click" />
-                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click1" />
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-danger" OnClick="btnCancel_Click" />
                 </div>
             </div>
 

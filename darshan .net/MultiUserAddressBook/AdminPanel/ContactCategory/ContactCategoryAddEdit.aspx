@@ -15,10 +15,11 @@
 
     <div class="row m-2">
         <div class="col-md-4">
-            Contact Category Name :
+            Contact Category Name* :
         </div>
         <div class="col-md-8">
             <asp:TextBox ID="txtContactCategoryName" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvConCate" runat="server" ControlToValidate="txtContactCategoryName" Display="Dynamic" ErrorMessage="Enter Contact Category Name" ForeColor="Red"></asp:RequiredFieldValidator>
         </div>
     </div>
   

@@ -42,6 +42,15 @@ namespace MultiUserAddressBook.AdminPanel.State
         protected global::System.Web.UI.WebControls.TextBox txtStateName;
 
         /// <summary>
+        /// rfvState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
+
+        /// <summary>
         /// txtStateCode control.
         /// </summary>
         /// <remarks>

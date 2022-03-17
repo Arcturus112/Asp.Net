@@ -29,6 +29,7 @@
                 </div>
                 <div class="col-md-8">
                     <asp:TextBox ID="txtCityName" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" ControlToValidate="txtCityName" Display="Dynamic" ErrorMessage="Enter City Name" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
