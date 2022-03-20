@@ -105,7 +105,7 @@ namespace Project5.AdminPanel.Contact
                 SqlCommand objCmd = objConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
                 #endregion Set Connection
-                objCmd.CommandText = "PR_Contact_DeleteByPK";
+                objCmd.CommandText = "PR_Contact_DeleteContact&ContactWiseContactCategory";
                 objCmd.Parameters.AddWithValue("@ContactID", ContactID.ToString());
                 objCmd.ExecuteNonQuery();
 

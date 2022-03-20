@@ -51,13 +51,13 @@ namespace Project5.AdminPanel.Contact
         protected global::System.Web.UI.WebControls.DropDownList ddlCityID;
 
         /// <summary>
-        /// ddlContactCategoryID control.
+        /// cblContactCategoryID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlContactCategoryID;
+        protected global::System.Web.UI.WebControls.CheckBoxList cblContactCategoryID;
 
         /// <summary>
         /// txtContactName control.

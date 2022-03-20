@@ -47,7 +47,7 @@
                     Contact Category :
                 </div>
                 <div class="col-md-8">
-                    <asp:DropDownList ID="ddlContactCategoryID" runat="server" CssClass="form-control"></asp:DropDownList>
+                    <asp:CheckBoxList runat="server" ID="cblContactCategoryID" ></asp:CheckBoxList>
                 </div>
             </div>
 
