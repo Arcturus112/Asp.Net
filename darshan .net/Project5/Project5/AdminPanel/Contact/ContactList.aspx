@@ -33,6 +33,7 @@
                     <asp:BoundField DataField="CountryName" HeaderText="CountryName"  />
                     <asp:BoundField DataField="StateName" HeaderText="StateName"  />
                     <asp:BoundField DataField="CityName" HeaderText="CityName"  />
+                    <asp:BoundField DataField="ContactCategoryNames" HeaderText="ContactCategoryName"  />
                     <asp:BoundField DataField="ContactName" HeaderText="ContactName"  />
                     <asp:BoundField DataField="ContactNo" HeaderText="ContactNo"  />
                     <asp:BoundField DataField="WhatsAppNo" HeaderText="WhatsAppNo"  />

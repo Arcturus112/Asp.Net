@@ -30,6 +30,7 @@ namespace Project5.AdminPanel.Contact
                 {
                     lblMassage.Text = "Edit Mode | ContactID = " + Request.QueryString["ContactID"].ToString();
                     FillControls(Convert.ToInt32(Request.QueryString["ContactID"]));
+                    FillControlCBLContactCategory(Convert.ToInt32(Request.QueryString["ContactID"]));
                     FillStateDropDownList();
                     FillCityDropDownList();
                 }
@@ -187,6 +188,45 @@ namespace Project5.AdminPanel.Contact
             }
         }
         #endregion Fill City DropDownList
+
+        #region Fill Control CBLContactCategory
+        private void FillControlCBLContactCategory(SqlInt32 ContactID)
+        {
+            SqlConnection objConn = new SqlConnection(ConfigurationManager.ConnectionStrings["AddressBookConnectionString"].ConnectionString);
+            try
+            {
+                #region Set Connection & Command Object
+                if (objConn.State != ConnectionState.Open)
+                    objConn.Open();
+                SqlCommand objCmdContactCategory = objConn.CreateCommand();
+                objCmdContactCategory.CommandType = CommandType.StoredProcedure;
+                objCmdContactCategory.CommandText = "PR_ContactWiseContactCategory_SelectByContactID";
+                objCmdContactCategory.Parameters.AddWithValue("@ContactID", ContactID.ToString().Trim());
+                SqlDataReader objSDRContactCategory = objCmdContactCategory.ExecuteReader();
+                #endregion Set Connection & Command Object
+
+                while (objSDRContactCategory.Read())
+                {
+                    foreach (ListItem li in cblContactCategoryID.Items)
+                    {
+                        if (li.Value == objSDRContactCategory["ContactCategoryID"].ToString().Trim())
+                        {
+                            li.Selected = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                lblMassage.Text = Ex.Message;
+            }
+            finally
+            {
+                if (objConn.State == ConnectionState.Open)
+                    objConn.Close();
+            }
+        }
+        #endregion Fill Control CBLContactCategory
 
         //#region Fill ContactCategory DropDownList
         //private void FillContactCategoryDropDownList()
@@ -530,8 +570,8 @@ namespace Project5.AdminPanel.Contact
                 }
                     #endregion Gather Information
 
-                    #region Set Connection & Command Object
-                    sqlConn.Open();
+                #region Set Connection & Command Object
+                sqlConn.Open();
 
                 SqlCommand objCmd = sqlConn.CreateCommand();
                 objCmd.CommandType = CommandType.StoredProcedure;
@@ -556,7 +596,7 @@ namespace Project5.AdminPanel.Contact
 
 
 
-                objCmd.Parameters.Add("@ContactID", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
+                //objCmd.Parameters.Add("@ContactID", SqlDbType.Int, 4).Direction = ParameterDirection.Output;
 
 
 
@@ -568,6 +608,28 @@ namespace Project5.AdminPanel.Contact
                     objCmd.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
                     objCmd.CommandText = "PR_Contact_UpdatePK";
                     objCmd.ExecuteNonQuery();
+
+
+                    //Delete ContactWiseContactCategory Records
+                    SqlCommand objCmdContactCategory = sqlConn.CreateCommand();
+                    objCmdContactCategory.CommandType = CommandType.StoredProcedure;
+                    objCmdContactCategory.CommandText = "PR_ContactWiseContactCategory_DeleteByContactID";
+                    objCmdContactCategory.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
+                    objCmdContactCategory.ExecuteNonQuery();
+
+                    foreach (ListItem liContactCategory in cblContactCategoryID.Items)
+                    {
+                        if (liContactCategory.Selected)
+                        {
+                            SqlCommand objCmdContactCategoryInsert = sqlConn.CreateCommand();
+                            objCmdContactCategoryInsert.CommandType = CommandType.StoredProcedure;
+                            objCmdContactCategoryInsert.CommandText = "PR_ContactWiseContactCategory_Insert";
+                            objCmdContactCategoryInsert.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
+                            objCmdContactCategoryInsert.Parameters.AddWithValue("@ContactCategoryID", liContactCategory.Value.ToString());
+                            objCmdContactCategoryInsert.ExecuteNonQuery();
+                        }
+                    }
+
                     Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
                     #endregion Edit Record
                 }
