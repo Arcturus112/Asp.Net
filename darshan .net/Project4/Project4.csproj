@@ -67,12 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EncDec.aspx" />
     <Content Include="ListBox.aspx" />
     <Content Include="ListControls.aspx" />
     <Content Include="resources\Country-codes.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncDec.aspx.cs">
+      <DependentUpon>EncDec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EncDec.aspx.designer.cs">
+      <DependentUpon>EncDec.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ListBox.aspx.cs">
       <DependentUpon>ListBox.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -55,180 +55,35 @@ namespace MultiUserAddressBook.AdminPanel.Contact
         }
         #endregion SelectedIndexChanged : State
 
+        #region FillDropDown
         #region Fill Country DropDownList
         private void FillCountryDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["MultiAddressBookConnectionString"].ConnectionString);
-
-            try
-            {
-                #region Set Connection & Command Object
-                if (sqlConn.State != ConnectionState.Open)
-                    sqlConn.Open();
-
-                SqlCommand objCmd = sqlConn.CreateCommand();
-
-                objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_Country_SelectForDropDownList";
-                objCmd.Parameters.AddWithValue("@USerID", Session["UserID"]);
-
-                SqlDataReader objSDR = objCmd.ExecuteReader();
-                #endregion Set Connection & Command Object
-                if (objSDR.HasRows == true)
-                {
-                    ddlCountryID.DataSource = objSDR;
-                    ddlCountryID.DataValueField = "CountryID";
-                    ddlCountryID.DataTextField = "CountryName";
-                    ddlStateID.Enabled = false;
-                    ddlCityID.Enabled = false;
-                    ddlCountryID.DataBind();
-                }
-
-                ddlCountryID.Items.Insert(0, new ListItem("Select Country", "-1"));
-
-                sqlConn.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMassage.Text = ex.Message;
-            }
-            finally
-            {
-                sqlConn.Close();
-            }
+            App_Code.CommonDropDownFillMethods.FillDropDownListCountryByUserID(ddlCountryID, Session["UserID"]);
         }
         #endregion Fill Country DropDownList
 
         #region Fill State DropDownList
         private void FillStateDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["MultiAddressBookConnectionString"].ConnectionString);
-
-            try
-            {
-                #region Set Connection & Command Object
-                sqlConn.Open();
-
-                SqlCommand objCmd = sqlConn.CreateCommand();
-
-                objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_State_SelectForDropDownListByCountryId";
-                objCmd.Parameters.AddWithValue("@CountryID", ddlCountryID.SelectedValue);
-                objCmd.Parameters.AddWithValue("@UserID", Session["UserID"]);
-
-                SqlDataReader objSDR = objCmd.ExecuteReader();
-                #endregion Set Connection & Command Object
-                ddlStateID.Enabled = false;
-                ddlCityID.Enabled = false;
-                ddlStateID.Items.Clear();
-                ddlCityID.Items.Clear();
-
-                if (objSDR.HasRows == true)
-                {
-                    ddlStateID.DataSource = objSDR;
-                    ddlStateID.Enabled = true;
-                    ddlStateID.DataValueField = "StateID";
-                    ddlStateID.DataTextField = "StateName";
-                    ddlStateID.DataBind();
-                }
-
-                ddlStateID.Items.Insert(0, new ListItem("Select State", "-1"));
-
-                sqlConn.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMassage.Text = ex.Message;
-            }
-            finally
-            {
-                sqlConn.Close();
-            }
+            App_Code.CommonDropDownFillMethods.FillDropDownListStateyByUserID(ddlStateID, ddlCountryID, Session["UserID"]);
         }
         #endregion Fill State DropDownList
 
         #region Fill City DropDownList
         private void FillCityDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["MultiAddressBookConnectionString"].ConnectionString);
-
-            try
-            {
-                #region Set Connection & Command Object
-                sqlConn.Open();
-
-                SqlCommand objCmd = sqlConn.CreateCommand();
-
-                objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_City_SelectForDropDownListByStateId";
-                objCmd.Parameters.AddWithValue("@StateID", ddlStateID.SelectedValue);
-                objCmd.Parameters.AddWithValue("@UserID", Session["UserID"]);
-                SqlDataReader objSDR = objCmd.ExecuteReader();
-                ddlCityID.Enabled = true;
-                ddlCityID.Items.Clear();
-                #endregion Set Connection & Command Object
-                if (objSDR.HasRows == true)
-                {
-                    ddlCityID.DataSource = objSDR;
-                    ddlCityID.DataValueField = "CityID";
-                    ddlCityID.DataTextField = "CityName";
-                    ddlCityID.DataBind();
-                }
-
-                ddlCityID.Items.Insert(0, new ListItem("Select City", "-1"));
-
-                sqlConn.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMassage.Text = ex.Message;
-            }
-            finally
-            {
-                sqlConn.Close();
-            }
+            App_Code.CommonDropDownFillMethods.FillDropDownListCityByUserID(ddlCityID, ddlStateID, Session["UserID"]);
         }
         #endregion Fill City DropDownList
 
         #region Fill ContactCategory DropDownList
         private void FillContactCategoryDropDownList()
         {
-            SqlConnection sqlConn = new SqlConnection(ConfigurationManager.ConnectionStrings["MultiAddressBookConnectionString"].ConnectionString);
-            try
-            {
-                #region Set Connection & Command Object
-                sqlConn.Open();
-
-                SqlCommand objCmd = sqlConn.CreateCommand();
-
-                objCmd.CommandType = CommandType.StoredProcedure;
-                objCmd.CommandText = "PR_ContactCategory_SelectForDropDownList";
-                objCmd.Parameters.AddWithValue("@UserID", Session["UserID"]);
-
-                SqlDataReader objSDR = objCmd.ExecuteReader();
-                #endregion Set Connection & Command Object
-                if (objSDR.HasRows == true)
-                {
-                    ddlContactCategoryID.DataSource = objSDR;
-                    ddlContactCategoryID.DataValueField = "ContactCategoryID";
-                    ddlContactCategoryID.DataTextField = "ContactCategoryName";
-                    ddlContactCategoryID.DataBind();
-                }
-
-                ddlContactCategoryID.Items.Insert(0, new ListItem("Select Contact Category", "-1"));
-
-                sqlConn.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMassage.Text = ex.Message;
-            }
-            finally
-            {
-                sqlConn.Close();
-            }
+            App_Code.CommonDropDownFillMethods.FillDropDownListContactCategoryByUserID(ddlContactCategoryID, Session["UserID"]);
         }
         #endregion Fill ContactCategory DropDownList
+        #endregion FillDropDown
 
         #region FillControls
         private void FillControls(SqlInt32 ContactID)
@@ -492,7 +347,7 @@ namespace MultiUserAddressBook.AdminPanel.Contact
                     objCmd.Parameters.AddWithValue("@ContactID", Request.QueryString["ContactID"].ToString().Trim());
                     objCmd.CommandText = "PR_Contact_UpdatePK";
                     objCmd.ExecuteNonQuery();
-                    Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
+                    Response.Redirect(GetRouteUrl("AdminPanelContactList"));
                     #endregion Edit Record
                 }
                 else
@@ -536,13 +391,11 @@ namespace MultiUserAddressBook.AdminPanel.Contact
 
         #region Button : Cancel
 
-
-
-        #endregion Button : Cancel
-
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/AdminPanel/Contact/ContactList.aspx", true);
         }
+
+        #endregion Button : Cancel
     }
 }

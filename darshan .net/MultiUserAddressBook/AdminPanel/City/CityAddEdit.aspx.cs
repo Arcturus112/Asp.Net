@@ -141,7 +141,7 @@ namespace MultiUserAddressBook.AdminPanel.City
                     objCmd.Parameters.AddWithValue("@CityID", Request.QueryString["CityID"].ToString().Trim());
                     objCmd.CommandText = "PR_City_UpdatePK";
                     objCmd.ExecuteNonQuery();
-                    Response.Redirect("~/AdminPanel/City/CityList.aspx", true);
+                    Response.Redirect(GetRouteUrl("AdminPanelCountryList"));
                     #endregion Edit Record
                 }
                 else
@@ -237,7 +237,7 @@ namespace MultiUserAddressBook.AdminPanel.City
         #region Button : Cancel
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/AdminPanel/City/CityList.aspx", true);
+            Response.Redirect(GetRouteUrl("AdminPanelCountryList"));
         }
         #endregion Button : Cancel
     }

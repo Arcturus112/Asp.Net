@@ -1870,6 +1870,7 @@
     <Content Include="Content\Js\bootstrap.bundle.min.js" />
     <Content Include="AdminPanel\Login\Login.aspx" />
     <Content Include="Content\Js\Custom.js" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -1957,6 +1958,7 @@
     <Compile Include="AdminPanel\State\StateList.aspx.designer.cs">
       <DependentUpon>StateList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App_Code\CommonDropDownFillMethods.cs" />
     <Compile Include="Content\MultiUserAddressBook.Master.cs">
       <DependentUpon>MultiUserAddressBook.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1970,6 +1972,9 @@
     </Compile>
     <Compile Include="AdminPanel\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
